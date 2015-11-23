@@ -14,6 +14,7 @@
 		63322AFE1C02B60300340F75 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63322AFD1C02B60300340F75 /* Images.xcassets */; };
 		63322B011C02B60300340F75 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63322AFF1C02B60300340F75 /* LaunchScreen.xib */; };
 		63322B0D1C02B60300340F75 /* SingleProgrammersSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63322B0C1C02B60300340F75 /* SingleProgrammersSTests.m */; };
+		C78921C9594ED07B95688FD2 /* libPods-SingleProgrammersS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE06F03EE8F679A8C34340DD /* libPods-SingleProgrammersS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0959479427B6F92E2F2BAB7D /* Pods-SingleProgrammersS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingleProgrammersS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SingleProgrammersS/Pods-SingleProgrammersS.debug.xcconfig"; sourceTree = "<group>"; };
 		63322AED1C02B60300340F75 /* SingleProgrammersS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SingleProgrammersS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63322AF11C02B60300340F75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63322AF21C02B60300340F75 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +42,8 @@
 		63322B061C02B60300340F75 /* SingleProgrammersSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SingleProgrammersSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63322B0B1C02B60300340F75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63322B0C1C02B60300340F75 /* SingleProgrammersSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingleProgrammersSTests.m; sourceTree = "<group>"; };
+		7403C7D29FEE41B6E49C9F6D /* Pods-SingleProgrammersS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingleProgrammersS.release.xcconfig"; path = "Pods/Target Support Files/Pods-SingleProgrammersS/Pods-SingleProgrammersS.release.xcconfig"; sourceTree = "<group>"; };
+		BE06F03EE8F679A8C34340DD /* libPods-SingleProgrammersS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SingleProgrammersS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C78921C9594ED07B95688FD2 /* libPods-SingleProgrammersS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +65,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3155BB1ED17D72AE1023A1B0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0959479427B6F92E2F2BAB7D /* Pods-SingleProgrammersS.debug.xcconfig */,
+				7403C7D29FEE41B6E49C9F6D /* Pods-SingleProgrammersS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		63322AE41C02B60300340F75 = {
 			isa = PBXGroup;
 			children = (
 				63322AEF1C02B60300340F75 /* SingleProgrammersS */,
 				63322B091C02B60300340F75 /* SingleProgrammersSTests */,
 				63322AEE1C02B60300340F75 /* Products */,
+				3155BB1ED17D72AE1023A1B0 /* Pods */,
+				AFA57F9CB4B085BF9A10091B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +135,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		AFA57F9CB4B085BF9A10091B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE06F03EE8F679A8C34340DD /* libPods-SingleProgrammersS.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63322B101C02B60300340F75 /* Build configuration list for PBXNativeTarget "SingleProgrammersS" */;
 			buildPhases = (
+				0AA3F8FCC3B68EBDC1F58140 /* Check Pods Manifest.lock */,
 				63322AE91C02B60300340F75 /* Sources */,
 				63322AEA1C02B60300340F75 /* Frameworks */,
 				63322AEB1C02B60300340F75 /* Resources */,
+				3229B5ED20003CB35620C58D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,6 +239,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0AA3F8FCC3B68EBDC1F58140 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3229B5ED20003CB35620C58D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SingleProgrammersS/Pods-SingleProgrammersS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		63322AE91C02B60300340F75 /* Sources */ = {
@@ -345,6 +404,7 @@
 		};
 		63322B111C02B60300340F75 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0959479427B6F92E2F2BAB7D /* Pods-SingleProgrammersS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SingleProgrammersS/Info.plist;
@@ -355,6 +415,7 @@
 		};
 		63322B121C02B60300340F75 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7403C7D29FEE41B6E49C9F6D /* Pods-SingleProgrammersS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SingleProgrammersS/Info.plist;
@@ -416,6 +477,7 @@
 				63322B121C02B60300340F75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63322B131C02B60300340F75 /* Build configuration list for PBXNativeTarget "SingleProgrammersSTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +486,7 @@
 				63322B151C02B60300340F75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
