@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ProChatViewController : UIViewController
+#import "BaseViewController.h"
+
+@interface ProChatViewController : BaseViewController
 
 @end

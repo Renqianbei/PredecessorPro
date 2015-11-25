@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ProOtherViewController : UIViewController
+#import "BaseViewController.h"
+
+@interface ProOtherViewController : BaseViewController
 
 @end

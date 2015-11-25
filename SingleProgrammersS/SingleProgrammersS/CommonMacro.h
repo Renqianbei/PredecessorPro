@@ -9,16 +9,19 @@
 #ifndef Film_1502_CommonMacro_h
 #define Film_1502_CommonMacro_h
 
-#define KScreenSize  ([UIScreen mainScreen].bounds.size)
+#define  KScreenSize  ([UIScreen mainScreen].bounds.size)
 
-#define KScreenWidth  (KScreenSize.width)
-#define KScreenHeight  (KScreenSize.height)
+#define  KScreenWith    (KScreenSize.width)
 
-#define offSet  64
+#define  KScreenHeight  (KScreenSize.height)
+
+#define  TopOffSet  64    //顶部的偏移量
+
+#define  TabHeight  44
 
 
 
 
 #import "UIView+FastFrame.h"
-
+#import "UIColor+UIColor_category.h"
 #endif
