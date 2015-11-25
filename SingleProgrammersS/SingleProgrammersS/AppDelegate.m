@@ -7,7 +7,9 @@
 //
 
 #import "AppDelegate.h"
-
+#import "FirstViewcontrolelr.h"
+#import "ViewController.h"
+#import "ProCenterViewcontrolelr.h"
 @interface AppDelegate ()
 
 @end
@@ -17,7 +19,27 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    NSLog(@"test");
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    
+    ProCenterViewcontrolelr * centerVC = [[ProCenterViewcontrolelr alloc] init];
+    
+    FirstViewcontrolelr * firstVc = [[FirstViewcontrolelr alloc] init];
+    ViewController * vc = [[ViewController alloc] init];
+    
+    centerVC.type = Fold;//样式
+    
+    centerVC.viewcontolelrs = @[firstVc,vc];
+    
+    self.window.rootViewController = centerVC;
+    
+    
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

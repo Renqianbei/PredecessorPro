@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63298F741C03202B008AB241 /* 11_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 63298F721C03202B008AB241 /* 11_1.jpg */; };
+		63298F751C03202B008AB241 /* 11_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 63298F731C03202B008AB241 /* 11_2.jpg */; };
 		63322AF31C02B60300340F75 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63322AF21C02B60300340F75 /* main.m */; };
 		63322AF61C02B60300340F75 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63322AF51C02B60300340F75 /* AppDelegate.m */; };
 		63322AF91C02B60300340F75 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63322AF81C02B60300340F75 /* ViewController.m */; };
@@ -14,6 +16,9 @@
 		63322AFE1C02B60300340F75 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63322AFD1C02B60300340F75 /* Images.xcassets */; };
 		63322B011C02B60300340F75 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63322AFF1C02B60300340F75 /* LaunchScreen.xib */; };
 		63322B0D1C02B60300340F75 /* SingleProgrammersSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63322B0C1C02B60300340F75 /* SingleProgrammersSTests.m */; };
+		63322B191C02ECAC00340F75 /* ProCenterViewcontrolelr.m in Sources */ = {isa = PBXBuildFile; fileRef = 63322B181C02ECAC00340F75 /* ProCenterViewcontrolelr.m */; };
+		63322B1D1C02EDC500340F75 /* UIView+FastFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 63322B1C1C02EDC500340F75 /* UIView+FastFrame.m */; };
+		63322B211C02F2A000340F75 /* FirstViewcontrolelr.m in Sources */ = {isa = PBXBuildFile; fileRef = 63322B201C02F2A000340F75 /* FirstViewcontrolelr.m */; };
 		C78921C9594ED07B95688FD2 /* libPods-SingleProgrammersS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE06F03EE8F679A8C34340DD /* libPods-SingleProgrammersS.a */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +34,8 @@
 
 /* Begin PBXFileReference section */
 		0959479427B6F92E2F2BAB7D /* Pods-SingleProgrammersS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingleProgrammersS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SingleProgrammersS/Pods-SingleProgrammersS.debug.xcconfig"; sourceTree = "<group>"; };
+		63298F721C03202B008AB241 /* 11_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11_1.jpg; sourceTree = "<group>"; };
+		63298F731C03202B008AB241 /* 11_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11_2.jpg; sourceTree = "<group>"; };
 		63322AED1C02B60300340F75 /* SingleProgrammersS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SingleProgrammersS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63322AF11C02B60300340F75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63322AF21C02B60300340F75 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -42,6 +49,13 @@
 		63322B061C02B60300340F75 /* SingleProgrammersSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SingleProgrammersSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63322B0B1C02B60300340F75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63322B0C1C02B60300340F75 /* SingleProgrammersSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingleProgrammersSTests.m; sourceTree = "<group>"; };
+		63322B171C02ECAC00340F75 /* ProCenterViewcontrolelr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProCenterViewcontrolelr.h; sourceTree = "<group>"; };
+		63322B181C02ECAC00340F75 /* ProCenterViewcontrolelr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProCenterViewcontrolelr.m; sourceTree = "<group>"; };
+		63322B1A1C02ED5900340F75 /* CommonMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonMacro.h; sourceTree = "<group>"; };
+		63322B1B1C02EDC500340F75 /* UIView+FastFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FastFrame.h"; sourceTree = "<group>"; };
+		63322B1C1C02EDC500340F75 /* UIView+FastFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FastFrame.m"; sourceTree = "<group>"; };
+		63322B1F1C02F2A000340F75 /* FirstViewcontrolelr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewcontrolelr.h; sourceTree = "<group>"; };
+		63322B201C02F2A000340F75 /* FirstViewcontrolelr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewcontrolelr.m; sourceTree = "<group>"; };
 		7403C7D29FEE41B6E49C9F6D /* Pods-SingleProgrammersS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingleProgrammersS.release.xcconfig"; path = "Pods/Target Support Files/Pods-SingleProgrammersS/Pods-SingleProgrammersS.release.xcconfig"; sourceTree = "<group>"; };
 		BE06F03EE8F679A8C34340DD /* libPods-SingleProgrammersS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SingleProgrammersS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -77,6 +91,8 @@
 		63322AE41C02B60300340F75 = {
 			isa = PBXGroup;
 			children = (
+				63298F721C03202B008AB241 /* 11_1.jpg */,
+				63298F731C03202B008AB241 /* 11_2.jpg */,
 				63322AEF1C02B60300340F75 /* SingleProgrammersS */,
 				63322B091C02B60300340F75 /* SingleProgrammersSTests */,
 				63322AEE1C02B60300340F75 /* Products */,
@@ -97,10 +113,15 @@
 		63322AEF1C02B60300340F75 /* SingleProgrammersS */ = {
 			isa = PBXGroup;
 			children = (
+				634A25641C055A0500D24745 /* Macro */,
+				63322B1E1C02EDCE00340F75 /* Vender */,
+				63322B161C02EC7500340F75 /* 封装的侧滑VC */,
 				63322AF41C02B60300340F75 /* AppDelegate.h */,
 				63322AF51C02B60300340F75 /* AppDelegate.m */,
 				63322AF71C02B60300340F75 /* ViewController.h */,
 				63322AF81C02B60300340F75 /* ViewController.m */,
+				63322B1F1C02F2A000340F75 /* FirstViewcontrolelr.h */,
+				63322B201C02F2A000340F75 /* FirstViewcontrolelr.m */,
 				63322AFA1C02B60300340F75 /* Main.storyboard */,
 				63322AFD1C02B60300340F75 /* Images.xcassets */,
 				63322AFF1C02B60300340F75 /* LaunchScreen.xib */,
@@ -133,6 +154,32 @@
 				63322B0B1C02B60300340F75 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		63322B161C02EC7500340F75 /* 封装的侧滑VC */ = {
+			isa = PBXGroup;
+			children = (
+				63322B171C02ECAC00340F75 /* ProCenterViewcontrolelr.h */,
+				63322B181C02ECAC00340F75 /* ProCenterViewcontrolelr.m */,
+			);
+			name = "封装的侧滑VC";
+			sourceTree = "<group>";
+		};
+		63322B1E1C02EDCE00340F75 /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+				63322B1B1C02EDC500340F75 /* UIView+FastFrame.h */,
+				63322B1C1C02EDC500340F75 /* UIView+FastFrame.m */,
+			);
+			name = Vender;
+			sourceTree = "<group>";
+		};
+		634A25641C055A0500D24745 /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				63322B1A1C02ED5900340F75 /* CommonMacro.h */,
+			);
+			name = Macro;
 			sourceTree = "<group>";
 		};
 		AFA57F9CB4B085BF9A10091B /* Frameworks */ = {
@@ -189,6 +236,7 @@
 		63322AE51C02B60300340F75 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = Pro;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = SingleProgrammers;
 				TargetAttributes = {
@@ -226,6 +274,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				63322AFC1C02B60300340F75 /* Main.storyboard in Resources */,
+				63298F741C03202B008AB241 /* 11_1.jpg in Resources */,
+				63298F751C03202B008AB241 /* 11_2.jpg in Resources */,
 				63322B011C02B60300340F75 /* LaunchScreen.xib in Resources */,
 				63322AFE1C02B60300340F75 /* Images.xcassets in Resources */,
 			);
@@ -278,9 +328,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63322B1D1C02EDC500340F75 /* UIView+FastFrame.m in Sources */,
 				63322AF91C02B60300340F75 /* ViewController.m in Sources */,
+				63322B191C02ECAC00340F75 /* ProCenterViewcontrolelr.m in Sources */,
 				63322AF61C02B60300340F75 /* AppDelegate.m in Sources */,
 				63322AF31C02B60300340F75 /* main.m in Sources */,
+				63322B211C02F2A000340F75 /* FirstViewcontrolelr.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,9 +460,13 @@
 			baseConfigurationReference = 0959479427B6F92E2F2BAB7D /* Pods-SingleProgrammersS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: LC LC (ZN9C7APJ9Z)";
 				INFOPLIST_FILE = SingleProgrammersS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.predecessor.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "c5ea71e4-3499-49ec-b9ac-ea2d9ad1e191";
 			};
 			name = Debug;
 		};
@@ -418,9 +475,13 @@
 			baseConfigurationReference = 7403C7D29FEE41B6E49C9F6D /* Pods-SingleProgrammersS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: LC LC (ZN9C7APJ9Z)";
 				INFOPLIST_FILE = SingleProgrammersS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.predecessor.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "c5ea71e4-3499-49ec-b9ac-ea2d9ad1e191";
 			};
 			name = Release;
 		};
