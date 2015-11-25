@@ -7,8 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "FirstViewcontrolelr.h"
-#import "ViewController.h"
+
+#import "ProSetViewController.h"
+
 #import "ProCenterViewcontrolelr.h"
 @interface AppDelegate ()
 
@@ -21,18 +22,22 @@
     // Override point for customization after application launch.
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    
+
     self.window.backgroundColor = [UIColor whiteColor];
     
     
     ProCenterViewcontrolelr * centerVC = [[ProCenterViewcontrolelr alloc] init];
     
-    FirstViewcontrolelr * firstVc = [[FirstViewcontrolelr alloc] init];
-    ViewController * vc = [[ViewController alloc] init];
+    UIStoryboard * storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    UITabBarController * tabVC = [storyBoard instantiateViewControllerWithIdentifier:@"tabBarControllerID"];
+    
+    ProSetViewController * setVc = [[ProSetViewController alloc] init];
+    
     
     centerVC.type = Fold;//样式
     
-    centerVC.viewcontolelrs = @[firstVc,vc];
+    centerVC.viewcontolelrs = @[setVc,tabVC];
     
     self.window.rootViewController = centerVC;
     

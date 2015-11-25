@@ -1,27 +1,21 @@
 //
-//  FirstViewcontrolelr.m
+//  ProOtherViewController.m
 //  SingleProgrammersS
 //
-//  Created by 任前辈 on 15/11/23.
-//  Copyright (c) 2015年 SingleProgrammers. All rights reserved.
+//  Created by 任前辈 on 15/11/25.
+//  Copyright © 2015年 SingleProgrammers. All rights reserved.
 //
 
-#import "FirstViewcontrolelr.h"
+#import "ProOtherViewController.h"
 
-@interface FirstViewcontrolelr ()
+@interface ProOtherViewController ()
 
 @end
 
-@implementation FirstViewcontrolelr
+@implementation ProOtherViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor blueColor];
-    UIImageView * imageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
-    
-    [self.view addSubview:imageView];
-    
-    imageView.image = [UIImage imageNamed:@"11_2.jpg"];
     // Do any additional setup after loading the view.
 }
 

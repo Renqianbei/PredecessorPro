@@ -11,14 +11,16 @@
 		63298F751C03202B008AB241 /* 11_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 63298F731C03202B008AB241 /* 11_2.jpg */; };
 		63322AF31C02B60300340F75 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63322AF21C02B60300340F75 /* main.m */; };
 		63322AF61C02B60300340F75 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63322AF51C02B60300340F75 /* AppDelegate.m */; };
-		63322AF91C02B60300340F75 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63322AF81C02B60300340F75 /* ViewController.m */; };
 		63322AFC1C02B60300340F75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63322AFA1C02B60300340F75 /* Main.storyboard */; };
 		63322AFE1C02B60300340F75 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63322AFD1C02B60300340F75 /* Images.xcassets */; };
 		63322B011C02B60300340F75 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63322AFF1C02B60300340F75 /* LaunchScreen.xib */; };
 		63322B0D1C02B60300340F75 /* SingleProgrammersSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63322B0C1C02B60300340F75 /* SingleProgrammersSTests.m */; };
 		63322B191C02ECAC00340F75 /* ProCenterViewcontrolelr.m in Sources */ = {isa = PBXBuildFile; fileRef = 63322B181C02ECAC00340F75 /* ProCenterViewcontrolelr.m */; };
 		63322B1D1C02EDC500340F75 /* UIView+FastFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 63322B1C1C02EDC500340F75 /* UIView+FastFrame.m */; };
-		63322B211C02F2A000340F75 /* FirstViewcontrolelr.m in Sources */ = {isa = PBXBuildFile; fileRef = 63322B201C02F2A000340F75 /* FirstViewcontrolelr.m */; };
+		6333E2081C0562000019621A /* ProChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6333E2071C0562000019621A /* ProChatViewController.m */; };
+		6333E20B1C0562200019621A /* ProMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6333E20A1C0562200019621A /* ProMainViewController.m */; };
+		6333E20E1C0562320019621A /* ProOtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6333E20D1C0562320019621A /* ProOtherViewController.m */; };
+		6333E2111C0562420019621A /* ProSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6333E2101C0562420019621A /* ProSetViewController.m */; };
 		C78921C9594ED07B95688FD2 /* libPods-SingleProgrammersS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE06F03EE8F679A8C34340DD /* libPods-SingleProgrammersS.a */; };
 /* End PBXBuildFile section */
 
@@ -41,8 +43,6 @@
 		63322AF21C02B60300340F75 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		63322AF41C02B60300340F75 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		63322AF51C02B60300340F75 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		63322AF71C02B60300340F75 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		63322AF81C02B60300340F75 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		63322AFB1C02B60300340F75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		63322AFD1C02B60300340F75 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		63322B001C02B60300340F75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -54,8 +54,14 @@
 		63322B1A1C02ED5900340F75 /* CommonMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonMacro.h; sourceTree = "<group>"; };
 		63322B1B1C02EDC500340F75 /* UIView+FastFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FastFrame.h"; sourceTree = "<group>"; };
 		63322B1C1C02EDC500340F75 /* UIView+FastFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FastFrame.m"; sourceTree = "<group>"; };
-		63322B1F1C02F2A000340F75 /* FirstViewcontrolelr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewcontrolelr.h; sourceTree = "<group>"; };
-		63322B201C02F2A000340F75 /* FirstViewcontrolelr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewcontrolelr.m; sourceTree = "<group>"; };
+		6333E2061C0562000019621A /* ProChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProChatViewController.h; sourceTree = "<group>"; };
+		6333E2071C0562000019621A /* ProChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProChatViewController.m; sourceTree = "<group>"; };
+		6333E2091C0562200019621A /* ProMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProMainViewController.h; sourceTree = "<group>"; };
+		6333E20A1C0562200019621A /* ProMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProMainViewController.m; sourceTree = "<group>"; };
+		6333E20C1C0562320019621A /* ProOtherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProOtherViewController.h; sourceTree = "<group>"; };
+		6333E20D1C0562320019621A /* ProOtherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProOtherViewController.m; sourceTree = "<group>"; };
+		6333E20F1C0562420019621A /* ProSetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProSetViewController.h; sourceTree = "<group>"; };
+		6333E2101C0562420019621A /* ProSetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProSetViewController.m; sourceTree = "<group>"; };
 		7403C7D29FEE41B6E49C9F6D /* Pods-SingleProgrammersS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingleProgrammersS.release.xcconfig"; path = "Pods/Target Support Files/Pods-SingleProgrammersS/Pods-SingleProgrammersS.release.xcconfig"; sourceTree = "<group>"; };
 		BE06F03EE8F679A8C34340DD /* libPods-SingleProgrammersS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SingleProgrammersS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -113,15 +119,13 @@
 		63322AEF1C02B60300340F75 /* SingleProgrammersS */ = {
 			isa = PBXGroup;
 			children = (
+				6333E2121C05633C0019621A /* BaseViewcontroller */,
+				6333E2051C0561E00019621A /* ViewControllers */,
 				634A25641C055A0500D24745 /* Macro */,
 				63322B1E1C02EDCE00340F75 /* Vender */,
 				63322B161C02EC7500340F75 /* 封装的侧滑VC */,
 				63322AF41C02B60300340F75 /* AppDelegate.h */,
 				63322AF51C02B60300340F75 /* AppDelegate.m */,
-				63322AF71C02B60300340F75 /* ViewController.h */,
-				63322AF81C02B60300340F75 /* ViewController.m */,
-				63322B1F1C02F2A000340F75 /* FirstViewcontrolelr.h */,
-				63322B201C02F2A000340F75 /* FirstViewcontrolelr.m */,
 				63322AFA1C02B60300340F75 /* Main.storyboard */,
 				63322AFD1C02B60300340F75 /* Images.xcassets */,
 				63322AFF1C02B60300340F75 /* LaunchScreen.xib */,
@@ -172,6 +176,28 @@
 				63322B1C1C02EDC500340F75 /* UIView+FastFrame.m */,
 			);
 			name = Vender;
+			sourceTree = "<group>";
+		};
+		6333E2051C0561E00019621A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6333E2061C0562000019621A /* ProChatViewController.h */,
+				6333E2071C0562000019621A /* ProChatViewController.m */,
+				6333E2091C0562200019621A /* ProMainViewController.h */,
+				6333E20A1C0562200019621A /* ProMainViewController.m */,
+				6333E20C1C0562320019621A /* ProOtherViewController.h */,
+				6333E20D1C0562320019621A /* ProOtherViewController.m */,
+				6333E20F1C0562420019621A /* ProSetViewController.h */,
+				6333E2101C0562420019621A /* ProSetViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6333E2121C05633C0019621A /* BaseViewcontroller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = BaseViewcontroller;
 			sourceTree = "<group>";
 		};
 		634A25641C055A0500D24745 /* Macro */ = {
@@ -329,11 +355,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				63322B1D1C02EDC500340F75 /* UIView+FastFrame.m in Sources */,
-				63322AF91C02B60300340F75 /* ViewController.m in Sources */,
 				63322B191C02ECAC00340F75 /* ProCenterViewcontrolelr.m in Sources */,
+				6333E20E1C0562320019621A /* ProOtherViewController.m in Sources */,
 				63322AF61C02B60300340F75 /* AppDelegate.m in Sources */,
+				6333E2081C0562000019621A /* ProChatViewController.m in Sources */,
+				6333E2111C0562420019621A /* ProSetViewController.m in Sources */,
 				63322AF31C02B60300340F75 /* main.m in Sources */,
-				63322B211C02F2A000340F75 /* FirstViewcontrolelr.m in Sources */,
+				6333E20B1C0562200019621A /* ProMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
