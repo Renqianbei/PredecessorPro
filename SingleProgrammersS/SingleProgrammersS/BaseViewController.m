@@ -30,11 +30,10 @@
     
     if (_tableView == nil) {
         
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, KScreenWith, KScreenHeight - TabHeight - TopOffSet) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, KScreenHeight - TabHeight - TopOffSet) style:UITableViewStylePlain];
         
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        
         
         //刷新控件
         self.refresh = [[DJRefresh alloc] initWithScrollView:_tableView delegate:self];

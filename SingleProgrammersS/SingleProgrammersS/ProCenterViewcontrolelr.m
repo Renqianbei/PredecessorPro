@@ -48,6 +48,9 @@
     [super viewDidLoad];
     
     
+    
+//    self.view.backgroundColor = [UIColor blackColor];
+    
     // Do any additional setup after loading the view.
     
 }
@@ -125,7 +128,6 @@
             
             self.centerViewcontroller.view.frame = CGRectMake(0, 0, self.view.width, self.view.height);
             
-            [self rotationWithAngle:0];
         }
             break;
             
@@ -188,6 +190,8 @@
 
 
 
+
+
 - (void)panView:(UIPanGestureRecognizer *)pan{
     
     CGPoint point = [pan locationInView:self.view];
@@ -207,6 +211,17 @@
         case UIGestureRecognizerStateChanged:
         {
             
+            if (self.isShowCenter) {
+                if (startPoint.x>100) {
+                    return;
+                }
+            }else{
+                
+                if (startPoint.x<self.view.width - 100) {
+                    return;
+                }
+            }
+            
             
             float offset = point.x - startPoint.x;
             
@@ -220,6 +235,16 @@
         case UIGestureRecognizerStateEnded:
         {
             
+            if (self.isShowCenter) {
+                if (startPoint.x>100) {
+                    return;
+                }
+            }else{
+                
+                if (startPoint.x<self.view.width - 100) {
+                    return;
+                }
+            }
             //趋势
             CGPoint velocityPoint = [pan velocityInView:self.view];
             
@@ -402,6 +427,12 @@
                         [self.delegate didShowViewControlelerAtIndex:1 inCenterViewController:self];
                         
                     }
+                    
+                    self.centerViewcontroller.view.userInteractionEnabled = YES;
+                    self.leftViewcontroller.view.userInteractionEnabled = NO;
+//                    self.centerViewcontroller.view.hidden = NO;
+//                    self.leftViewcontroller.view.hidden = YES;
+
                 }];
                 
             
@@ -419,6 +450,10 @@
                         [self.delegate didShowViewControlelerAtIndex:0 inCenterViewController:self];
                         
                     }
+                    self.centerViewcontroller.view.userInteractionEnabled = NO;
+                    self.leftViewcontroller.view.userInteractionEnabled = YES;
+//                    self.centerViewcontroller.view.hidden = YES;
+//                    self.leftViewcontroller.view.hidden = NO;
                 }];
             }
             
@@ -577,8 +612,8 @@ CATransform3D CATransform3DPerspect(CATransform3D t, CGPoint center, float disZ)
     CATransform3D mat1 = CATransform3DConcat(CATransform3DConcat(move1, rotate1), back1);
     
     
-    self.centerViewcontroller.view.layer.transform = CATransform3DPerspect(mat0, CGPointZero, 500);
-    self.leftViewcontroller.view.layer.transform = CATransform3DPerspect(mat1, CGPointZero, 500);
+    self.centerViewcontroller.view.layer.transform = CATransform3DPerspect(mat0, CGPointZero, 1000);
+    self.leftViewcontroller.view.layer.transform = CATransform3DPerspect(mat1, CGPointZero, 1000);
 
 }
 

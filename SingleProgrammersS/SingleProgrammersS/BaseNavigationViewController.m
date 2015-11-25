@@ -17,18 +17,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationBar.translucent = NO;
     
     //设置 导航栏 title 的颜色
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName :[UIFont systemFontOfSize:22],NSForegroundColorAttributeName : [UIColor grayColor]}];
     
-    UIImage * image = [UIImage imageNamed:@"navigationbar"];
-    
-    image = [image resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 10, 10) resizingMode:UIImageResizingModeStretch];
-    
-    
-    [self.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
-    
+    self.navigationBar.barStyle = UIBarStyleDefault;
+    self.navigationBar.translucent = YES;
     
     // Do any additional setup after loading the view.
 }

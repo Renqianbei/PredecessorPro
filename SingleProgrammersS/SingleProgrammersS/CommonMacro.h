@@ -11,7 +11,7 @@
 
 #define  KScreenSize  ([UIScreen mainScreen].bounds.size)
 
-#define  KScreenWith    (KScreenSize.width)
+#define  KScreenWidth    (KScreenSize.width)
 
 #define  KScreenHeight  (KScreenSize.height)
 
