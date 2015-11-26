@@ -27,6 +27,7 @@
 
 @end
 
+
 @interface Videolist : JSONModel
 
 @property(nonatomic,strong)NSArray <ProVideoModel,ConvertOnDemand>* list;//里面是
@@ -81,7 +82,7 @@
 @property(nonatomic,copy)NSString * film_id;
 @property(nonatomic,copy)NSString * poster_url;
 
-@property(nonatomic,strong)Videolist *  videos;
+@property(nonatomic,strong)Videolist <Optional>*  videos;
 
 
 @end
@@ -92,9 +93,9 @@
 
 @property(nonatomic,strong)ProFilmDetailModel *  base_info;
 
-@property(nonatomic,strong)Creator_info *  creator_info;
+@property(nonatomic,strong)Creator_info <Optional>*  creator_info;
 
-@property(nonatomic,strong)Film_photos *  film_photos;
+@property(nonatomic,strong)Film_photos <Optional>*  film_photos;
 
 @end
 

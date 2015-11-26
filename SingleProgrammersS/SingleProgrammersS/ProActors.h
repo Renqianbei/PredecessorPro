@@ -13,5 +13,5 @@
 @property(nonatomic,copy)NSString * job;
 @property(nonatomic,copy)NSString * name;
 @property(nonatomic,copy)NSString * profile_image_url;
-@property(nonatomic,assign)NSInteger  verified;
+@property(nonatomic,copy)NSString <Optional> * verified;
 @end

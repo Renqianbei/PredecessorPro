@@ -35,13 +35,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SingleProgrammersS/DownLoadDataSource.m"
-            timestampString = "470200665.413624"
+            filePath = "SingleProgrammersS/ProForeshowTableViewCell.m"
+            timestampString = "470224191.121925"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "256"
-            endingLineNumber = "256"
-            landmarkName = "-loadFilmDetailWithId:complicate:"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "-setModels:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

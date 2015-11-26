@@ -21,7 +21,7 @@
 
 
 
-
+#import <UIImageView+AFNetworking.h>
 #import "UIView+FastFrame.h"
 #import "UIColor+UIColor_category.h"
 #endif

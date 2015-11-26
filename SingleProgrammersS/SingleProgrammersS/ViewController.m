@@ -78,6 +78,9 @@ typedef enum viewType{
 //加载数据 重新加载数据
 -(void)loadDataComplicate:(void(^)())complicate type:(TABLE_TYPE)type next:(BOOL)ret{
   
+    if (ret == NO) {
+        [self showActivity];
+    }
     [self.download  downloadNext:ret complicate:^(BOOL success, id data) {
         
         if (success) {
@@ -94,11 +97,14 @@ typedef enum viewType{
             [[self tableViewType:type] reloadData];
         }else{
             NSLog(@"%@",data);
+            [self showToast:[(NSError *)data domain]];
         }
         
         if (complicate) {
             complicate();
         }
+        
+        [self hideActivity];
 
         
     } TYPE:type];
@@ -117,7 +123,11 @@ typedef enum viewType{
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-
+    UIView * view = [[[self.navigationController.navigationBar subviews][0] subviews][0]  subviews][0];
+    view.hidden = NO;//还原导航栏
+    
+    UIView * shadleImage = [[self.navigationController.navigationBar subviews][0] subviews][1];
+    shadleImage.hidden = NO;
 }
 
 - (void)viewDidLoad {
@@ -129,14 +139,14 @@ typedef enum viewType{
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     
-    
+
     [self createMainView];
     
     //加载第一页数据
     [self loadDataComplicate:nil type:HOT next:NO];
-    [self loadDataComplicate:nil type:COMING next:NO];
-
-    [self loadDataComplicate:nil type:LIST next:NO];
+//    [self loadDataComplicate:nil type:COMING next:NO];
+//
+//    [self loadDataComplicate:nil type:LIST next:NO];
 
    
     UIView * blackView = [[UIView alloc] initWithFrame:CGRectMake(self.view.width-20, 0, 20, self.view.height)];
@@ -222,7 +232,8 @@ typedef enum viewType{
     [self forbidAllTableViewscrollToTop];
     
     [self tableViewType:COMING].scrollsToTop = YES;
-    
+    self.title = @"推荐";
+
     [self.view bringSubviewToFront:[self tableViewType:COMING]];//让中间显示到最上层
     
    
@@ -415,6 +426,7 @@ typedef enum viewType{
     
     FilmdetailViewController * dvc = [[FilmdetailViewController alloc] init];
     dvc.model = model;
+    
     [self.navigationController pushViewController:dvc animated:YES];
     
 }
@@ -675,6 +687,36 @@ CATransform3D  ProTransFormWithCenterOffset(CGPoint center , CATransform3D trans
 }
 
 -(void)showViewWithType:(TABLE_TYPE)type{
+    
+    switch (type) {
+        
+        case HOT:
+        {
+            self.title = @"热门";
+            
+        }
+            
+            break;
+        case COMING:
+        {
+            self.title = @"推荐";
+            
+        }
+            break;
+        case LIST:
+        {
+            self.title = @"影单";
+            
+        }
+            break;
+            
+        default:
+            break;
+    }
+    
+    if ([_dataSource[type] count] == 0) {
+        [self loadDataComplicate:nil type:type next:NO];
+    }
     
     [self forbidAllTableViewscrollToTop];
   

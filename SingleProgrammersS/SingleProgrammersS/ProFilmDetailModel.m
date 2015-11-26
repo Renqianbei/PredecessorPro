@@ -20,11 +20,6 @@
 
 
 
-@implementation Videolist
-
-
-
-@end
 
 @implementation Creator_info
 
@@ -50,3 +45,9 @@
 
 @end
 
+
+@implementation Videolist
+
+
+
+@end

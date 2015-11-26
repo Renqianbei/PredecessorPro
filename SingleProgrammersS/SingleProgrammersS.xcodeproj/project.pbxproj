@@ -43,6 +43,13 @@
 		6333E2501C05652F0019621A /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6333E24D1C05652F0019621A /* BaseViewController.m */; };
 		6333E2511C05652F0019621A /* BaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6333E24F1C05652F0019621A /* BaseNavigationViewController.m */; };
 		6333E2551C0566CA0019621A /* UIColor+UIColor_category.m in Sources */ = {isa = PBXBuildFile; fileRef = 6333E2541C0566CA0019621A /* UIColor+UIColor_category.m */; };
+		635D57761C06E45000EA2CBF /* UIHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 635D57751C06E45000EA2CBF /* UIHeaderView.m */; };
+		635D57781C06E46A00EA2CBF /* UIHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 635D57771C06E46A00EA2CBF /* UIHeaderView.xib */; };
+		635D577B1C06FD2F00EA2CBF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 635D57791C06FCFE00EA2CBF /* AVFoundation.framework */; };
+		635D57801C0705B200EA2CBF /* ProActorsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 635D577E1C0705B200EA2CBF /* ProActorsTableViewCell.m */; };
+		635D57811C0705B200EA2CBF /* ProActorsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 635D577F1C0705B200EA2CBF /* ProActorsTableViewCell.xib */; };
+		635D57851C0705DA00EA2CBF /* ProForeshowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 635D57831C0705DA00EA2CBF /* ProForeshowTableViewCell.m */; };
+		635D57861C0705DA00EA2CBF /* ProForeshowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 635D57841C0705DA00EA2CBF /* ProForeshowTableViewCell.xib */; };
 		63F7F32D1C05B808006CD036 /* DownLoadDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F7F3271C05B808006CD036 /* DownLoadDataSource.m */; };
 		63F7F32E1C05B808006CD036 /* FilmCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F7F3291C05B808006CD036 /* FilmCell.m */; };
 		63F7F32F1C05B808006CD036 /* FilmCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63F7F32A1C05B808006CD036 /* FilmCell.xib */; };
@@ -140,6 +147,16 @@
 		6333E24F1C05652F0019621A /* BaseNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationViewController.m; sourceTree = "<group>"; };
 		6333E2531C0566CA0019621A /* UIColor+UIColor_category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+UIColor_category.h"; sourceTree = "<group>"; };
 		6333E2541C0566CA0019621A /* UIColor+UIColor_category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+UIColor_category.m"; sourceTree = "<group>"; };
+		635D57741C06E45000EA2CBF /* UIHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIHeaderView.h; sourceTree = "<group>"; };
+		635D57751C06E45000EA2CBF /* UIHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIHeaderView.m; sourceTree = "<group>"; };
+		635D57771C06E46A00EA2CBF /* UIHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIHeaderView.xib; sourceTree = "<group>"; };
+		635D57791C06FCFE00EA2CBF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		635D577D1C0705B200EA2CBF /* ProActorsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProActorsTableViewCell.h; sourceTree = "<group>"; };
+		635D577E1C0705B200EA2CBF /* ProActorsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProActorsTableViewCell.m; sourceTree = "<group>"; };
+		635D577F1C0705B200EA2CBF /* ProActorsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProActorsTableViewCell.xib; sourceTree = "<group>"; };
+		635D57821C0705DA00EA2CBF /* ProForeshowTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProForeshowTableViewCell.h; sourceTree = "<group>"; };
+		635D57831C0705DA00EA2CBF /* ProForeshowTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProForeshowTableViewCell.m; sourceTree = "<group>"; };
+		635D57841C0705DA00EA2CBF /* ProForeshowTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProForeshowTableViewCell.xib; sourceTree = "<group>"; };
 		63F7F3261C05B808006CD036 /* DownLoadDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoadDataSource.h; sourceTree = "<group>"; };
 		63F7F3271C05B808006CD036 /* DownLoadDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoadDataSource.m; sourceTree = "<group>"; };
 		63F7F3281C05B808006CD036 /* FilmCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilmCell.h; sourceTree = "<group>"; };
@@ -168,6 +185,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				635D577B1C06FD2F00EA2CBF /* AVFoundation.framework in Frameworks */,
 				C78921C9594ED07B95688FD2 /* libPods-SingleProgrammersS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,6 +234,7 @@
 		63322AEF1C02B60300340F75 /* SingleProgrammersS */ = {
 			isa = PBXGroup;
 			children = (
+				635D577C1C07057500EA2CBF /* cellView */,
 				63F7F3251C05B7D1006CD036 /* Model */,
 				6333E2521C0566370019621A /* Class+category */,
 				6333E2121C05633C0019621A /* BaseClass */,
@@ -419,24 +438,40 @@
 			name = Macro;
 			sourceTree = "<group>";
 		};
-		63F7F3251C05B7D1006CD036 /* Model */ = {
+		635D577C1C07057500EA2CBF /* cellView */ = {
 			isa = PBXGroup;
 			children = (
-				63F7F3411C05B871006CD036 /* FilmdetailViewController.h */,
-				63F7F3421C05B871006CD036 /* FilmdetailViewController.m */,
-				63F7F3341C05B867006CD036 /* FilmListModel.h */,
-				63F7F3351C05B867006CD036 /* FilmListModel.m */,
 				63F7F3361C05B867006CD036 /* ListCollectionViewCell.h */,
 				63F7F3371C05B867006CD036 /* ListCollectionViewCell.m */,
 				63F7F3381C05B867006CD036 /* ListCollectionViewCell.xib */,
 				63F7F3391C05B867006CD036 /* ListTableViewCell.h */,
 				63F7F33A1C05B867006CD036 /* ListTableViewCell.m */,
 				63F7F33B1C05B867006CD036 /* ListTableViewCell.xib */,
-				63F7F3261C05B808006CD036 /* DownLoadDataSource.h */,
-				63F7F3271C05B808006CD036 /* DownLoadDataSource.m */,
 				63F7F3281C05B808006CD036 /* FilmCell.h */,
 				63F7F3291C05B808006CD036 /* FilmCell.m */,
 				63F7F32A1C05B808006CD036 /* FilmCell.xib */,
+				635D577D1C0705B200EA2CBF /* ProActorsTableViewCell.h */,
+				635D577E1C0705B200EA2CBF /* ProActorsTableViewCell.m */,
+				635D577F1C0705B200EA2CBF /* ProActorsTableViewCell.xib */,
+				635D57821C0705DA00EA2CBF /* ProForeshowTableViewCell.h */,
+				635D57831C0705DA00EA2CBF /* ProForeshowTableViewCell.m */,
+				635D57841C0705DA00EA2CBF /* ProForeshowTableViewCell.xib */,
+			);
+			name = cellView;
+			sourceTree = "<group>";
+		};
+		63F7F3251C05B7D1006CD036 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				635D57741C06E45000EA2CBF /* UIHeaderView.h */,
+				635D57751C06E45000EA2CBF /* UIHeaderView.m */,
+				635D57771C06E46A00EA2CBF /* UIHeaderView.xib */,
+				63F7F3411C05B871006CD036 /* FilmdetailViewController.h */,
+				63F7F3421C05B871006CD036 /* FilmdetailViewController.m */,
+				63F7F3341C05B867006CD036 /* FilmListModel.h */,
+				63F7F3351C05B867006CD036 /* FilmListModel.m */,
+				63F7F3261C05B808006CD036 /* DownLoadDataSource.h */,
+				63F7F3271C05B808006CD036 /* DownLoadDataSource.m */,
 				63F7F32B1C05B808006CD036 /* FilmModel.h */,
 				63F7F32C1C05B808006CD036 /* FilmModel.m */,
 				6300557B1C06A6A40058D658 /* ProVideoModel.h */,
@@ -452,6 +487,7 @@
 		AFA57F9CB4B085BF9A10091B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				635D57791C06FCFE00EA2CBF /* AVFoundation.framework */,
 				BE06F03EE8F679A8C34340DD /* libPods-SingleProgrammersS.a */,
 			);
 			name = Frameworks;
@@ -542,9 +578,12 @@
 			files = (
 				63322AFC1C02B60300340F75 /* Main.storyboard in Resources */,
 				6333E21F1C0564C30019621A /* DJRefresh.bundle in Resources */,
+				635D57861C0705DA00EA2CBF /* ProForeshowTableViewCell.xib in Resources */,
+				635D57811C0705B200EA2CBF /* ProActorsTableViewCell.xib in Resources */,
 				63298F741C03202B008AB241 /* 11_1.jpg in Resources */,
 				63298F751C03202B008AB241 /* 11_2.jpg in Resources */,
 				63F7F3401C05B867006CD036 /* ListTableViewCell.xib in Resources */,
+				635D57781C06E46A00EA2CBF /* UIHeaderView.xib in Resources */,
 				63322B011C02B60300340F75 /* LaunchScreen.xib in Resources */,
 				63322AFE1C02B60300340F75 /* Images.xcassets in Resources */,
 				63F7F33E1C05B867006CD036 /* ListCollectionViewCell.xib in Resources */,
@@ -634,8 +673,11 @@
 				63F7F33C1C05B867006CD036 /* FilmListModel.m in Sources */,
 				63322AF31C02B60300340F75 /* main.m in Sources */,
 				6333E2491C0565080019621A /* JSONModel+networking.m in Sources */,
+				635D57801C0705B200EA2CBF /* ProActorsTableViewCell.m in Sources */,
 				63F7F3301C05B808006CD036 /* FilmModel.m in Sources */,
 				6333E20B1C0562200019621A /* ProMainViewController.m in Sources */,
+				635D57851C0705DA00EA2CBF /* ProForeshowTableViewCell.m in Sources */,
+				635D57761C06E45000EA2CBF /* UIHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -144,7 +144,7 @@
     
     self.mbProgressView.labelText = nil;
     self.mbProgressView.mode = MBProgressHUDModeIndeterminate;
-
+    [self.view bringSubviewToFront:self.mbProgressView];
     [self.mbProgressView show:YES];
 }
 
@@ -158,6 +158,8 @@
     
     self.mbProgressView.labelText = text;
     self.mbProgressView.mode = MBProgressHUDModeText;
+    [self.view bringSubviewToFront:self.mbProgressView];
+
     [self.mbProgressView show:YES];
     [self.mbProgressView hide:YES afterDelay:1];
     
