@@ -10,4 +10,10 @@
 
 @interface ProVideoModel : JSONModel
 
+@property(nonatomic,assign)float duration;
+@property(nonatomic,copy)NSString * image_url;
+@property(nonatomic,copy)NSString * play_url;//网页地址
+@property(nonatomic,copy)NSString * title;
+@property(nonatomic,copy)NSString * video_url;
+
 @end

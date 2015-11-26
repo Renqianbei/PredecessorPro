@@ -107,6 +107,7 @@
 #pragma mark -
 
 - (void)setImageWithURL:(NSURL *)url {
+    self.image = nil;
     [self setImageWithURL:url placeholderImage:nil];
 }
 

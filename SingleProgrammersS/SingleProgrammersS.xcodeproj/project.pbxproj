@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6300557D1C06A6A40058D658 /* ProVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6300557C1C06A6A40058D658 /* ProVideoModel.m */; };
+		630055801C06A6EC0058D658 /* ProActors.m in Sources */ = {isa = PBXBuildFile; fileRef = 6300557F1C06A6EC0058D658 /* ProActors.m */; };
+		630055831C06A7090058D658 /* ProFilmDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 630055821C06A7090058D658 /* ProFilmDetailModel.m */; };
 		63298F741C03202B008AB241 /* 11_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 63298F721C03202B008AB241 /* 11_1.jpg */; };
 		63298F751C03202B008AB241 /* 11_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 63298F731C03202B008AB241 /* 11_2.jpg */; };
 		63322AF31C02B60300340F75 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63322AF21C02B60300340F75 /* main.m */; };
@@ -66,6 +69,12 @@
 
 /* Begin PBXFileReference section */
 		0959479427B6F92E2F2BAB7D /* Pods-SingleProgrammersS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingleProgrammersS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SingleProgrammersS/Pods-SingleProgrammersS.debug.xcconfig"; sourceTree = "<group>"; };
+		6300557B1C06A6A40058D658 /* ProVideoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProVideoModel.h; sourceTree = "<group>"; };
+		6300557C1C06A6A40058D658 /* ProVideoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProVideoModel.m; sourceTree = "<group>"; };
+		6300557E1C06A6EC0058D658 /* ProActors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProActors.h; sourceTree = "<group>"; };
+		6300557F1C06A6EC0058D658 /* ProActors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProActors.m; sourceTree = "<group>"; };
+		630055811C06A7090058D658 /* ProFilmDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProFilmDetailModel.h; sourceTree = "<group>"; };
+		630055821C06A7090058D658 /* ProFilmDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProFilmDetailModel.m; sourceTree = "<group>"; };
 		63298F721C03202B008AB241 /* 11_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11_1.jpg; sourceTree = "<group>"; };
 		63298F731C03202B008AB241 /* 11_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11_2.jpg; sourceTree = "<group>"; };
 		63322AED1C02B60300340F75 /* SingleProgrammersS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SingleProgrammersS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -430,6 +439,12 @@
 				63F7F32A1C05B808006CD036 /* FilmCell.xib */,
 				63F7F32B1C05B808006CD036 /* FilmModel.h */,
 				63F7F32C1C05B808006CD036 /* FilmModel.m */,
+				6300557B1C06A6A40058D658 /* ProVideoModel.h */,
+				6300557C1C06A6A40058D658 /* ProVideoModel.m */,
+				6300557E1C06A6EC0058D658 /* ProActors.h */,
+				6300557F1C06A6EC0058D658 /* ProActors.m */,
+				630055811C06A7090058D658 /* ProFilmDetailModel.h */,
+				630055821C06A7090058D658 /* ProFilmDetailModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -593,6 +608,7 @@
 				6333E24A1C0565080019621A /* JSONKeyMapper.m in Sources */,
 				6333E20E1C0562320019621A /* ProOtherViewController.m in Sources */,
 				6333E2551C0566CA0019621A /* UIColor+UIColor_category.m in Sources */,
+				6300557D1C06A6A40058D658 /* ProVideoModel.m in Sources */,
 				6333E2221C0564C30019621A /* DJRefreshTopView.m in Sources */,
 				63322AF61C02B60300340F75 /* AppDelegate.m in Sources */,
 				6333E2201C0564C30019621A /* DJRefresh.m in Sources */,
@@ -610,8 +626,10 @@
 				6333E24B1C0565080019621A /* JSONValueTransformer.m in Sources */,
 				63F7F33D1C05B867006CD036 /* ListCollectionViewCell.m in Sources */,
 				6333E2111C0562420019621A /* ProSetViewController.m in Sources */,
+				630055801C06A6EC0058D658 /* ProActors.m in Sources */,
 				6333E2471C0565080019621A /* JSONAPI.m in Sources */,
 				63F7F3331C05B823006CD036 /* ViewController.m in Sources */,
+				630055831C06A7090058D658 /* ProFilmDetailModel.m in Sources */,
 				6333E2511C05652F0019621A /* BaseNavigationViewController.m in Sources */,
 				63F7F33C1C05B867006CD036 /* FilmListModel.m in Sources */,
 				63322AF31C02B60300340F75 /* main.m in Sources */,

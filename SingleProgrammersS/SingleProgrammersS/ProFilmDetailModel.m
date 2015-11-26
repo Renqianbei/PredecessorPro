@@ -8,6 +8,45 @@
 
 #import "ProFilmDetailModel.h"
 
+@implementation DetailInfoModel
+
+
+
+@end
+
 @implementation ProFilmDetailModel
 
 @end
+
+
+
+@implementation Videolist
+
+
+
+@end
+
+@implementation Creator_info
+
+
+
+@end
+
+@implementation ActorList
+
+
+
+@end
+@implementation Film_photos
+
+
+
+@end
+
+
+@implementation FilmPhoto
+
+
+
+@end
+

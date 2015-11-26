@@ -10,6 +10,7 @@
 
 #import <UIImageView+AFNetworking.h>
 
+#import "DownLoadDataSource.h"
 #define HeaderHeight  200.0
 
 #define FirstoffSet   -0
@@ -18,7 +19,7 @@ static NSString * cellID = @"cellID";
 
 @interface FilmdetailViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (strong, nonatomic)  UIImageView *headerImageView;
-
+@property (nonatomic,strong)DownLoadDataSource * datasource;
 @end
 
 @implementation FilmdetailViewController
@@ -30,6 +31,15 @@ static NSString * cellID = @"cellID";
     view.hidden = NO;//还原导航栏
     self.navigationController.navigationBar.shadowImage = nil;
 
+}
+
+-(DownLoadDataSource *)datasource{
+    
+    if (_datasource == nil) {
+        _datasource = [[DownLoadDataSource alloc] init];
+        
+    }
+    return _datasource;
 }
 
 - (void)viewDidLoad {
@@ -49,6 +59,10 @@ static NSString * cellID = @"cellID";
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
     self.tableView.frame = self.view.bounds;
     [self.view addSubview:self.tableView];
+    
+    [self.datasource loadFilmDetailWithId:self.model.film_id complicate:^(BOOL success, id data) {
+        
+    }];
     // Do any additional setup after loading the view.
 }
 
@@ -102,6 +116,11 @@ static NSString * cellID = @"cellID";
         _headerImageView.center = CGPointMake(_headerImageView.center.x, HeaderHeight/2 - (scare - 1)*HeaderHeight/2);
         
 
+        
+
+    }
+    if (mm>100) {
+        scrollView.contentOffset = CGPointMake(0, FirstoffSet - mm);
     }
     
     float yy = scrollView.contentOffset.y - FirstoffSet;

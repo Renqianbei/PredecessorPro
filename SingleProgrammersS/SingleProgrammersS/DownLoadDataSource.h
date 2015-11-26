@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "ProFilmDetailModel.h"
 
 #define FIRSTPAGE @"http://ting.weibo.com/movieapp/rank/hot"
 #define SECONDPAGE @"http://ting.weibo.com/movieapp/rank/coming"
@@ -17,6 +17,9 @@
 
 
 #define FILMLIST  @"http://ting.weibo.com/movieapp/pagelist/recommendmovie" 
+
+
+#define FILMDetail @"http://ting.weibo.com/movieapp/page/base"
 //首页热映
 //@"http://ting.weibo.com/movieapp/rank/hot"
 
@@ -84,5 +87,13 @@ typedef NSString *  MYString;
 //获取影单
 -(void)loadFilmListWithId:(NSString *)listID complicate:(Complicate)complicate ;
 
+
+/**
+ *  获取电影详情
+ *
+ *  @param filmID     id
+ *  @param complicate 回调 返回电影详情模型
+ */
+-(void)loadFilmDetailWithId:(NSString *)filmID complicate:(Complicate)complicate;
 
 @end

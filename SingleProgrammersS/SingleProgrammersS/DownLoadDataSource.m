@@ -239,6 +239,29 @@
     
 }
 
+-(void)loadFilmDetailWithId:(NSString *)filmID complicate:(Complicate)complicate{
+    
+    [self downloadWithUrl:FILMDetail parameters:@{@"film_id":filmID} complicate:^(BOOL success, id data) {
+        
+        NSLog(@"%@",data);
+        
+        if (success) {
+            if ([data[@"status"] integerValue] != 1) {
+                
+                complicate(NO,data);
+                
+                return ;
+            }
+            NSDictionary * dic = data[@"data"];
+            DetailInfoModel * model = [[DetailInfoModel alloc] initWithDictionary:dic error:nil];
+          
+            complicate(YES,model);
+        }else{
+            complicate(NO,data);
+        }
+        
+    }];
+}
 
 
 @end
