@@ -20,7 +20,7 @@
 #define  TabHeight  44
 
 
-
+#import "UIImage+Pro_Image.h"
 #import <UIImageView+AFNetworking.h>
 #import "UIView+FastFrame.h"
 #import "UIColor+UIColor_category.h"

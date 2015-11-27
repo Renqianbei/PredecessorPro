@@ -23,10 +23,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor randColor];
     
     self.automaticallyAdjustsScrollViewInsets
-    = NO;
+    = YES;
     // Do any additional setup after loading the view.
 }
 

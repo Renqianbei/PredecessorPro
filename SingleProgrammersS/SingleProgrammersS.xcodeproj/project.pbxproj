@@ -10,6 +10,7 @@
 		6300557D1C06A6A40058D658 /* ProVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6300557C1C06A6A40058D658 /* ProVideoModel.m */; };
 		630055801C06A6EC0058D658 /* ProActors.m in Sources */ = {isa = PBXBuildFile; fileRef = 6300557F1C06A6EC0058D658 /* ProActors.m */; };
 		630055831C06A7090058D658 /* ProFilmDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 630055821C06A7090058D658 /* ProFilmDetailModel.m */; };
+		6303D4741C08372000182298 /* UIImage+Pro_Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 6303D4731C08372000182298 /* UIImage+Pro_Image.m */; };
 		63298F741C03202B008AB241 /* 11_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 63298F721C03202B008AB241 /* 11_1.jpg */; };
 		63298F751C03202B008AB241 /* 11_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 63298F731C03202B008AB241 /* 11_2.jpg */; };
 		63322AF31C02B60300340F75 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63322AF21C02B60300340F75 /* main.m */; };
@@ -82,6 +83,8 @@
 		6300557F1C06A6EC0058D658 /* ProActors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProActors.m; sourceTree = "<group>"; };
 		630055811C06A7090058D658 /* ProFilmDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProFilmDetailModel.h; sourceTree = "<group>"; };
 		630055821C06A7090058D658 /* ProFilmDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProFilmDetailModel.m; sourceTree = "<group>"; };
+		6303D4721C08372000182298 /* UIImage+Pro_Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Pro_Image.h"; sourceTree = "<group>"; };
+		6303D4731C08372000182298 /* UIImage+Pro_Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Pro_Image.m"; sourceTree = "<group>"; };
 		63298F721C03202B008AB241 /* 11_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11_1.jpg; sourceTree = "<group>"; };
 		63298F731C03202B008AB241 /* 11_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11_2.jpg; sourceTree = "<group>"; };
 		63322AED1C02B60300340F75 /* SingleProgrammersS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SingleProgrammersS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -426,6 +429,8 @@
 				63322B1C1C02EDC500340F75 /* UIView+FastFrame.m */,
 				6333E2531C0566CA0019621A /* UIColor+UIColor_category.h */,
 				6333E2541C0566CA0019621A /* UIColor+UIColor_category.m */,
+				6303D4721C08372000182298 /* UIImage+Pro_Image.h */,
+				6303D4731C08372000182298 /* UIImage+Pro_Image.m */,
 			);
 			name = "Class+category";
 			sourceTree = "<group>";
@@ -638,6 +643,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6303D4741C08372000182298 /* UIImage+Pro_Image.m in Sources */,
 				6333E2481C0565080019621A /* JSONHTTPClient.m in Sources */,
 				6333E2501C05652F0019621A /* BaseViewController.m in Sources */,
 				6333E2431C0565080019621A /* JSONModelArray.m in Sources */,

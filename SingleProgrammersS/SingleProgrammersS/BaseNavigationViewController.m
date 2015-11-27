@@ -5,7 +5,7 @@
 //  Created by 任前辈 on 15/11/17.
 //  Copyright (c) 2015年 1000phone. All rights reserved.
 //
-
+#import "UIImage+Pro_Image.h"
 #import "BaseNavigationViewController.h"
 
 @interface BaseNavigationViewController ()
@@ -19,10 +19,14 @@
     
     
     //设置 导航栏 title 的颜色
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName :[UIFont systemFontOfSize:22],NSForegroundColorAttributeName : [UIColor grayColor]}];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName :[UIFont systemFontOfSize:18],NSForegroundColorAttributeName : [UIColor whiteColor]}];
     
-    self.navigationBar.barStyle = UIBarStyleDefault;
-    self.navigationBar.translucent = YES;
+//    self.navigationBar.barStyle = UIBarStyleBlack
+    ;//黑色
+    
+    [self.navigationBar setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithWhite:0 alpha:0.8]] forBarMetrics:UIBarMetricsDefault];
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
     // Do any additional setup after loading the view.
 }

@@ -31,7 +31,7 @@ static NSString * cellIndentifier = @"Mycell";
 static NSString * cellList = @"cellList";
 
 
-#define tableViewHeight     (self.view.height-TopOffSet)
+#define tableViewHeight     (KScreenHeight)
 
 
 typedef enum viewType{
@@ -55,6 +55,7 @@ typedef enum viewType{
 @property(nonatomic,strong)DownLoadDataSource * download;
 @property(nonatomic,strong)UIPanGestureRecognizer * panGesture;
 @property(nonatomic,strong)NSMutableArray * refreshViews;//实现刷新
+@property(nonatomic,strong)UIView * mainView;
 
 @property(nonatomic,assign)ViewType showType;
 
@@ -138,6 +139,10 @@ typedef enum viewType{
 
 
    
+    /**
+     给右边添加一个 view可以实现立体滚动
+     
+     */
     UIView * blackView = [[UIView alloc] initWithFrame:CGRectMake(self.view.width-20, 0, 20, self.view.height)];
     blackView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.2];
 
@@ -155,8 +160,11 @@ typedef enum viewType{
 
 -(void)createMainView{
     
+    self.mainView = [[UIView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:self.mainView];
     
     [self addTableView];
+    
 
 }
 
@@ -172,7 +180,9 @@ typedef enum viewType{
         
         [_dataSource addObject:mutArray];
         
-        UITableView *  _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, TopOffSet, self.view.width, tableViewHeight) style:UITableViewStylePlain];
+        UITableView *  _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, tableViewHeight) style:UITableViewStylePlain];
+        
+        _tableView.scrollIndicatorInsets = UIEdgeInsetsMake(TopOffSet, 0, 0, 0);
         
         _tableView.rowHeight = 200;
         
@@ -182,7 +192,6 @@ typedef enum viewType{
         _tableView.dataSource = self;
         _tableView.tag = i + tableTag ;
         
-//        _tableView.scrollEnabled = NO;
         //注册cell
         
         switch (i) {
@@ -210,7 +219,7 @@ typedef enum viewType{
         
         _tableView.tag = i + tableTag ;
 
-        [self.view addSubview:_tableView];
+        [self.mainView addSubview:_tableView];
         
 
     }
@@ -223,12 +232,16 @@ typedef enum viewType{
     [self tableViewType:COMING].scrollsToTop = YES;
     self.title = @"推荐";
 
-    [self.view bringSubviewToFront:[self tableViewType:COMING]];//让中间显示到最上层
+    [self.mainView bringSubviewToFront:[self tableViewType:COMING]];//让中间显示到最上层
     
    
 
 }
 
+
+/**
+ *  禁用所有 scrollview 点击顶部回到顶部
+ */
 -(void)forbidAllTableViewscrollToTop{
     
     for (int i = 0; i < 3; i ++) {
@@ -241,7 +254,7 @@ typedef enum viewType{
 //通过type值 找tabelView
 -(UITableView *)tableViewType:(TABLE_TYPE)type{
     
-   return  (UITableView *)[self.view viewWithTag:type+tableTag];
+   return  (UITableView *)[self.mainView viewWithTag:type+tableTag];
     
     
 }
@@ -361,17 +374,6 @@ typedef enum viewType{
 
 
 //滚动 如果没有数据 请求数据
--(void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    
-    if (scrollView.tag == scrollViewTag) {
-        
-        NSInteger index = scrollView.contentOffset.x/scrollView.frame.size.width;
-        
-        if ([_dataSource[index] count] == 0) {
-            [self loadDataComplicate:nil type:index next:NO];
-        }
-    }
-}
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
@@ -421,7 +423,11 @@ typedef enum viewType{
 
 
 
-#pragma mark 旋转相关
+
+
+
+
+#pragma mark 旋转相关 的计算
 
 -(void)refreshTableViewAngle:(float)angle{
     
@@ -713,8 +719,11 @@ CATransform3D  ProTransFormWithCenterOffset(CGPoint center , CATransform3D trans
     [self tableViewType:type].scrollsToTop = YES;
     
     
-    [self.view insertSubview:[self tableViewType:type] belowSubview:self.panGesture.view];
+    [self.mainView insertSubview:[self tableViewType:type] belowSubview:self.panGesture.view];
 }
+
+
+
 
 -(void)hiddenTop:(BOOL)top  Bottom:(BOOL)bottom{
     

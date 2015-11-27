@@ -55,6 +55,7 @@
     
 }
 
+
 -(void)setResponsePanGesture:(BOOL)responsePanGesture{
     
     _responsePanGesture = responsePanGesture;
@@ -103,6 +104,7 @@
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     
+    [self.leftViewcontroller viewWillAppear:YES];
     
    
     
@@ -134,6 +136,10 @@
         default:
             break;
     }
+    
+    [self.centerViewcontroller viewDidAppear:YES];
+    self.centerViewcontroller.view.hidden = NO;
+    self.leftViewcontroller.view.hidden = YES;
     self.showCenter = YES;
     
 }
@@ -145,7 +151,9 @@
         
         [vc.view removeFromSuperview];
         
+        [vc removeFromParentViewController];
     }
+    
     
     _viewcontolelrs  = viewcontolelrs;
     
@@ -159,14 +167,17 @@
 
 -(void)addChild{
     
+    
+    
     for (UIViewController * vc in self.viewcontolelrs) {
         
         [self.view addSubview:vc.view];
         
         [self addChildViewController:vc];
         
-        
     }
+    
+    
     
     [self.view bringSubviewToFront:self.centerViewcontroller.view];
     
@@ -206,6 +217,18 @@
         case UIGestureRecognizerStateBegan:
         {
             startPoint = point;
+            
+            self.centerViewcontroller.view.hidden = NO;
+            self.leftViewcontroller.view.hidden = NO;
+
+            if (self.isShowCenter) {
+                [self.leftViewcontroller viewWillAppear:YES];
+                [self.centerViewcontroller viewWillDisappear:YES];
+            }else{
+                [self.centerViewcontroller viewWillAppear:YES];
+                [self.leftViewcontroller viewWillDisappear:YES];
+
+            }
         }
             break;
         case UIGestureRecognizerStateChanged:
@@ -416,6 +439,7 @@
             if (center) {
                 
                 
+                
                 [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.3 initialSpringVelocity:3 options:UIViewAnimationOptionLayoutSubviews animations:^{
                     [self rotationWithAngle:0];
 
@@ -428,15 +452,20 @@
                         
                     }
                     
+                    [self.centerViewcontroller viewDidAppear:YES];
                     self.centerViewcontroller.view.userInteractionEnabled = YES;
+                    
+                    
+                    [self.leftViewcontroller viewDidDisappear:YES];
                     self.leftViewcontroller.view.userInteractionEnabled = NO;
-//                    self.centerViewcontroller.view.hidden = NO;
-//                    self.leftViewcontroller.view.hidden = YES;
-
+                    
+                    self.leftViewcontroller.view.hidden = YES;
                 }];
                 
             
             }else{
+                
+              
                 
                 [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.3 initialSpringVelocity:3 options:UIViewAnimationOptionLayoutSubviews animations:^{
                    
@@ -450,10 +479,14 @@
                         [self.delegate didShowViewControlelerAtIndex:0 inCenterViewController:self];
                         
                     }
+                    [self.leftViewcontroller viewDidAppear:YES];
+                    [self.centerViewcontroller viewDidDisappear:YES];
+                    
                     self.centerViewcontroller.view.userInteractionEnabled = NO;
                     self.leftViewcontroller.view.userInteractionEnabled = YES;
-//                    self.centerViewcontroller.view.hidden = YES;
-//                    self.leftViewcontroller.view.hidden = NO;
+                    self.centerViewcontroller.view.hidden = YES;
+
+
                 }];
             }
             

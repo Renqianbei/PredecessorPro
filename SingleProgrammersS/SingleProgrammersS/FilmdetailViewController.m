@@ -19,6 +19,7 @@ static NSString * actorCellID = @"ProActorsTableViewCell";
 static NSString * ForeshowID = @"ProForeshowTableViewCell";
 
 #define FirstoffSet   -0
+
 #define defaultHeaderHeight   360
 
 @interface FilmdetailViewController ()<UITableViewDataSource,UITableViewDelegate>
@@ -45,7 +46,7 @@ static NSString * ForeshowID = @"ProForeshowTableViewCell";
 }
 
 
--(void)viewDidAppear:(BOOL)animated{
+-(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.title = self.model.name;
 
@@ -77,11 +78,24 @@ static NSString * ForeshowID = @"ProForeshowTableViewCell";
 
 -(void)showNavigationBar:(BOOL)ret{
     
-    UIView * view = [[[self.rootNav.navigationBar subviews][0] subviews][0]  subviews][0];
-    view.hidden = !ret;//还原导航栏
-    
-    UIView * shadleImage = [[self.rootNav.navigationBar subviews][0] subviews][1];
-    shadleImage.hidden = !ret;
+    if ([UIDevice currentDevice].systemVersion.floatValue < 9.0&&0) {
+        UIView * view = [[[self.rootNav.navigationBar subviews][0] subviews][0]  subviews][0];
+        view.hidden = !ret;//还原导航栏
+        
+        UIView * shadleImage = [[self.rootNav.navigationBar subviews][0] subviews][1];
+        shadleImage.hidden = !ret;
+
+    }else{
+        //
+        if (ret) {
+            [self.navigationController.navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
+            self.navigationController.navigationBar.shadowImage = nil;
+            
+        }else{
+            [self changeAlpha:0];
+
+        }
+    }
     
 }
 
@@ -159,6 +173,7 @@ static NSString * ForeshowID = @"ProForeshowTableViewCell";
 
 -(void)changeAlpha:(float)alpha{
     
+    if ([UIDevice currentDevice].systemVersion.floatValue < 9.0&&0) {
 
     //修改导航栏 颜色透明度
     UIView * view = [[[self.navigationController.navigationBar subviews][0] subviews][0]  subviews][0];
@@ -172,6 +187,14 @@ static NSString * ForeshowID = @"ProForeshowTableViewCell";
     UIView * backGroundView = [self.navigationController.navigationBar subviews][0];
     backGroundView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:alpha];
     
+    }else {
+        
+        
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithWhite:0 alpha:alpha]] forBarMetrics:UIBarMetricsDefault];
+        
+        [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
+        
+    }
     
     
 }

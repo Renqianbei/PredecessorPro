@@ -23,20 +23,23 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
+    //容器视图控制器
     ProCenterViewcontrolelr * centerVC = [[ProCenterViewcontrolelr alloc] init];
     
+    //主页
     UIStoryboard * storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
     
     UITabBarController * tabVC = [storyBoard instantiateViewControllerWithIdentifier:@"tabBarControllerID"];
     
+    
+    //电影页
     ViewController * setVc = [[ViewController alloc] init];
     
-    
-    
-    
-    BaseNavigationViewController * naVC = [[BaseNavigationViewController alloc] initWithRootViewController:setVc];
+    BaseNavigationViewController * naVC = [[BaseNavigationViewController alloc] initWithRootViewController:setVc];//设置页
 
     centerVC.type = Fold;//样式
+    
     
     centerVC.viewcontolelrs = @[tabVC,naVC];
     
@@ -44,10 +47,11 @@
     
     
      
-    
+    //为了实现一个功能 最外层添加了 一个导航栏
     self.navigationVC = [[BaseNavigationViewController alloc] initWithRootViewController:centerVC];
     
-    [self.navigationVC setNavigationBarHidden:YES];
+    
+    [self.navigationVC setNavigationBarHidden:YES];//隐藏导航栏
     
     self.window.rootViewController = self.navigationVC;
 
