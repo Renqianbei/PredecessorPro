@@ -10,6 +10,7 @@
 #import "CommonMacro.h"
 #import "DJRefresh.h"
 #import "MBProgressHUD.h"
+#import "AppDelegate.h"
 
 @interface BaseViewController : UIViewController<DJRefreshDelegate,UITableViewDelegate,UITableViewDataSource>
 
@@ -23,6 +24,7 @@
 
 @property(nonatomic,strong)MBProgressHUD * mbProgressView;
 
+-(UINavigationController*)rootNav;
 
 -(void)createLeftItemWith:(NSString *)title;
 

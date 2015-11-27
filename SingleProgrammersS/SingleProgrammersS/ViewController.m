@@ -121,15 +121,6 @@ typedef enum viewType{
     return _panGesture;
 }
 
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    UIView * view = [[[self.navigationController.navigationBar subviews][0] subviews][0]  subviews][0];
-    view.hidden = NO;//还原导航栏
-    
-    UIView * shadleImage = [[self.navigationController.navigationBar subviews][0] subviews][1];
-    shadleImage.hidden = NO;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -142,11 +133,9 @@ typedef enum viewType{
 
     [self createMainView];
     
-    //加载第一页数据
-    [self loadDataComplicate:nil type:HOT next:NO];
-//    [self loadDataComplicate:nil type:COMING next:NO];
-//
-//    [self loadDataComplicate:nil type:LIST next:NO];
+    //加载中间页的数据
+    [self loadDataComplicate:nil type:COMING next:NO];
+
 
    
     UIView * blackView = [[UIView alloc] initWithFrame:CGRectMake(self.view.width-20, 0, 20, self.view.height)];
@@ -237,7 +226,6 @@ typedef enum viewType{
     [self.view bringSubviewToFront:[self tableViewType:COMING]];//让中间显示到最上层
     
    
-//    [self refreshTableViewAngle:0];
 
 }
 
@@ -427,7 +415,7 @@ typedef enum viewType{
     FilmdetailViewController * dvc = [[FilmdetailViewController alloc] init];
     dvc.model = model;
     
-    [self.navigationController pushViewController:dvc animated:YES];
+    [self.rootNav pushViewController:dvc animated:YES];
     
 }
 

@@ -37,7 +37,7 @@ static NSString * cellID = @"cellID";
     if (_collectionView == nil) {
         
         UICollectionViewFlowLayout * layout = [[UICollectionViewFlowLayout alloc] init];
-        layout.itemSize = CGSizeMake(70, 100);
+        layout.itemSize = CGSizeMake(70, 90);
         layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         
         layout.minimumInteritemSpacing = 0;
@@ -73,13 +73,13 @@ static NSString * cellID = @"cellID";
     UILabel * label = [cell viewWithTag:101];
     
     if (imageView == nil) {
-        imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 70, 70)];
-        imageView.layer.cornerRadius = 35;
+        imageView = [[UIImageView alloc] initWithFrame:CGRectMake(5, 0, 60, 60)];
+        imageView.layer.cornerRadius = 30;
         imageView.layer.masksToBounds = YES;
         imageView.contentMode = UIViewContentModeScaleAspectFit;
         imageView.tag = 100;
         
-        label = [[UILabel alloc] initWithFrame:CGRectMake(0, 80, 70, 20)];
+        label = [[UILabel alloc] initWithFrame:CGRectMake(0, 65, 70, 20)];
         label.font = [UIFont systemFontOfSize:13];
         label.tag = 101;
         [cell addSubview:imageView];

@@ -73,16 +73,16 @@
 
 @interface ProFilmDetailModel : JSONModel
 
-@property(nonatomic,copy)NSString * actors;
-@property(nonatomic,copy)NSString * country;
-@property(nonatomic,copy)NSString * desc;
+@property(nonatomic,copy)NSString <Optional>* actors;
+@property(nonatomic,copy)NSString <Optional>* country;
+@property(nonatomic,copy)NSString <Optional>* desc;
 
-@property(nonatomic,copy)NSString * directors;
+@property(nonatomic,copy)NSString <Optional>* directors;
 
-@property(nonatomic,copy)NSString * film_id;
-@property(nonatomic,copy)NSString * poster_url;
+@property(nonatomic,copy)NSString <Optional>* film_id;
+@property(nonatomic,copy)NSString <Optional>* poster_url;
 
-@property(nonatomic,strong)Videolist <Optional>*  videos;
+@property(nonatomic,strong)Videolist<Optional>*  videos;
 
 
 @end
@@ -91,7 +91,7 @@
 
 @interface DetailInfoModel : JSONModel
 
-@property(nonatomic,strong)ProFilmDetailModel *  base_info;
+@property(nonatomic,strong)ProFilmDetailModel<Optional> *  base_info;
 
 @property(nonatomic,strong)Creator_info <Optional>*  creator_info;
 

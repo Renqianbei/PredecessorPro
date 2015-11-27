@@ -7,12 +7,18 @@
 //
 
 #import "BaseViewController.h"
-
 @interface BaseViewController ()
 
 @end
 
 @implementation BaseViewController
+
+-(UINavigationController*)rootNav{
+    
+    return ((AppDelegate *)[UIApplication sharedApplication].delegate).navigationVC;
+    
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

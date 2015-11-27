@@ -24,6 +24,7 @@
 @property(nonatomic,strong)CAGradientLayer * gradientlayer;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *labelHeight;
 
--(void)refreshGradientLayer;
+-(void)refreshLayer;
+@property (weak, nonatomic) IBOutlet UIButton *foreshowButton;
 
 @end

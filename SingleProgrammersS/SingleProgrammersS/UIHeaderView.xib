@@ -15,28 +15,23 @@
                     <rect key="frame" x="0.0" y="0.0" width="311" height="589"/>
                     <animations/>
                 </imageView>
-                <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GzX-RY-tUM">
-                    <rect key="frame" x="0.0" y="561" width="311" height="28"/>
-                    <animations/>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="28" id="5Hi-er-Piq"/>
-                    </constraints>
-                </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6i-Rc-dco">
-                    <rect key="frame" x="115" y="307" width="80" height="80"/>
+                    <rect key="frame" x="115" y="357" width="80" height="45"/>
                     <animations/>
                     <constraints>
                         <constraint firstAttribute="width" constant="80" id="CC7-Qh-C76"/>
-                        <constraint firstAttribute="height" constant="80" id="LP6-RL-CZr"/>
+                        <constraint firstAttribute="height" constant="45" id="LP6-RL-CZr"/>
                     </constraints>
-                    <state key="normal" title="播放"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                    <state key="normal" title="预告">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                     <connections>
                         <action selector="clickPlay:" destination="-1" eventType="touchUpInside" id="3EQ-IQ-Svg"/>
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cie-24-DdC">
-                    <rect key="frame" x="0.0" y="407" width="311" height="181.5"/>
+                    <rect key="frame" x="0.0" y="422" width="311" height="166.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccE-lk-MCS">
                             <rect key="frame" x="139" y="10" width="33" height="21"/>
@@ -59,14 +54,14 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hoi-oT-U0F">
-                            <rect key="frame" x="118" y="141" width="74" height="30"/>
+                            <rect key="frame" x="118" y="126" width="74" height="30"/>
                             <animations/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="74" id="2av-JK-a1I"/>
                                 <constraint firstAttribute="height" constant="30" id="QJw-Wk-L05"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                            <state key="normal" title="点我"/>
+                            <state key="normal" title="展开"/>
                             <connections>
                                 <action selector="zhankai:" destination="-1" eventType="touchUpInside" id="T5X-oF-2j7"/>
                             </connections>
@@ -79,7 +74,7 @@
                         <constraint firstAttribute="bottom" secondItem="hoi-oT-U0F" secondAttribute="bottom" constant="10" id="JUL-dZ-Obx"/>
                         <constraint firstItem="ccE-lk-MCS" firstAttribute="top" secondItem="Cie-24-DdC" secondAttribute="top" constant="10" id="V4y-nH-WP0"/>
                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sta-J4-gM2" secondAttribute="trailing" constant="10" id="Vl8-v6-1WS"/>
-                        <constraint firstItem="hoi-oT-U0F" firstAttribute="top" secondItem="sta-J4-gM2" secondAttribute="bottom" constant="25" id="cob-eg-x6V"/>
+                        <constraint firstItem="hoi-oT-U0F" firstAttribute="top" secondItem="sta-J4-gM2" secondAttribute="bottom" constant="10" id="cob-eg-x6V"/>
                         <constraint firstItem="sta-J4-gM2" firstAttribute="top" secondItem="ccE-lk-MCS" secondAttribute="bottom" constant="25" id="gef-ht-tPe"/>
                         <constraint firstItem="sta-J4-gM2" firstAttribute="leading" secondItem="Cie-24-DdC" secondAttribute="leading" constant="10" id="pTG-Cw-ed3"/>
                         <constraint firstAttribute="height" constant="100" id="uQo-5f-zLP"/>
@@ -98,18 +93,14 @@
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="GzX-RY-tUM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0ZE-h2-vCd"/>
-                <constraint firstItem="L6i-Rc-dco" firstAttribute="top" secondItem="GzX-RY-tUM" secondAttribute="bottom" id="0uk-VU-qt6"/>
                 <constraint firstAttribute="trailing" secondItem="Cie-24-DdC" secondAttribute="trailing" id="2Js-wp-ij0"/>
                 <constraint firstAttribute="bottom" secondItem="Cie-24-DdC" secondAttribute="bottom" id="4an-L7-q8Q"/>
                 <constraint firstAttribute="bottom" secondItem="aN9-55-w4R" secondAttribute="bottom" id="C3P-qc-bKA"/>
                 <constraint firstItem="L6i-Rc-dco" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="J1k-FV-b7d"/>
                 <constraint firstItem="Cie-24-DdC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="KI3-L3-REl"/>
                 <constraint firstItem="Cie-24-DdC" firstAttribute="top" secondItem="L6i-Rc-dco" secondAttribute="bottom" constant="50" id="Pnd-Qn-f2O"/>
-                <constraint firstAttribute="bottom" secondItem="GzX-RY-tUM" secondAttribute="bottom" id="Rg5-8b-UeH"/>
                 <constraint firstItem="L6i-Rc-dco" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="120" id="SvU-ld-mAV"/>
                 <constraint firstItem="aN9-55-w4R" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Wnc-pF-DdL"/>
-                <constraint firstAttribute="trailing" secondItem="GzX-RY-tUM" secondAttribute="trailing" id="a9U-co-ljQ"/>
                 <constraint firstItem="Cie-24-DdC" firstAttribute="top" secondItem="L6i-Rc-dco" secondAttribute="bottom" constant="20" id="eFv-d6-kN7"/>
                 <constraint firstAttribute="trailing" secondItem="aN9-55-w4R" secondAttribute="trailing" id="egf-6I-J1T"/>
                 <constraint firstAttribute="bottom" secondItem="Cie-24-DdC" secondAttribute="bottom" id="fV0-fb-PAt"/>
@@ -119,7 +110,6 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <variation key="default">
                 <mask key="constraints">
-                    <exclude reference="0uk-VU-qt6"/>
                     <exclude reference="SvU-ld-mAV"/>
                     <exclude reference="wBp-AY-KDi"/>
                     <exclude reference="4an-L7-q8Q"/>
@@ -129,6 +119,7 @@
             <connections>
                 <outlet property="backView" destination="Cie-24-DdC" id="nBb-XZ-G4e"/>
                 <outlet property="content" destination="sta-J4-gM2" id="h0P-2j-vRp"/>
+                <outlet property="foreshowButton" destination="L6i-Rc-dco" id="v7Z-PW-6ov"/>
                 <outlet property="imageView" destination="aN9-55-w4R" id="CNG-j0-jUF"/>
                 <outlet property="labelHeight" destination="kBN-16-SLB" id="x54-3l-3Vm"/>
                 <outlet property="title" destination="ccE-lk-MCS" id="oxR-4y-iKo"/>

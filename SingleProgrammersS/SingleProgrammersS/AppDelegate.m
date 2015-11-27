@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "BaseNavigationViewController.h"
 #import "ViewController.h"
 
 #import "ProCenterViewcontrolelr.h"
@@ -31,17 +31,26 @@
     
     ViewController * setVc = [[ViewController alloc] init];
     
-    UINavigationController * naVC = [[UINavigationController alloc] initWithRootViewController:setVc];
+    
+    
+    
+    BaseNavigationViewController * naVC = [[BaseNavigationViewController alloc] initWithRootViewController:setVc];
 
     centerVC.type = Fold;//样式
     
     centerVC.viewcontolelrs = @[tabVC,naVC];
     
-    self.window.rootViewController = centerVC;
     
     
     
+     
     
+    self.navigationVC = [[BaseNavigationViewController alloc] initWithRootViewController:centerVC];
+    
+    [self.navigationVC setNavigationBarHidden:YES];
+    
+    self.window.rootViewController = self.navigationVC;
+
     
     
     UIImageView * imageView = [[UIImageView alloc] initWithFrame:self.window.bounds];

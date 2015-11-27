@@ -243,7 +243,7 @@
     
     [self downloadWithUrl:FILMDetail parameters:@{@"film_id":filmID} complicate:^(BOOL success, id data) {
         
-        NSLog(@"%@",data);
+//        NSLog(@"%@",data);
         
         if (success) {
             if ([data[@"status"] integerValue] != 1) {

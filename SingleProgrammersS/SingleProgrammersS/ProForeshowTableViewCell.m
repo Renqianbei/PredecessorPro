@@ -35,14 +35,14 @@ static NSString * cellID = @"cellID";
     if (_collectionView == nil) {
         
         UICollectionViewFlowLayout * layout = [[UICollectionViewFlowLayout alloc] init];
-        layout.itemSize = CGSizeMake(150, 100);
+        layout.itemSize = CGSizeMake(130, 110);
         layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         
         layout.minimumInteritemSpacing = 0;
         
         layout.sectionInset = UIEdgeInsetsMake(2, 2, 2, 2);
         
-        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(5, 20, KScreenWidth-10, 100) collectionViewLayout:layout];
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(5, 20, KScreenWidth-10, 115) collectionViewLayout:layout];
         _collectionView.scrollsToTop = NO;
         _collectionView.dataSource = self;
         
@@ -70,8 +70,9 @@ static NSString * cellID = @"cellID";
     UIImageView * imageView = [cell viewWithTag:100];
     
     if (imageView == nil) {
-        imageView = [[UIImageView alloc] initWithFrame:CGRectMake(5, 5, 140, 90)];
+        imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 130, 110)];
         imageView.tag = 100;
+//        imageView.contentMode = UIViewContentModeScaleAspectFit;
         [cell addSubview:imageView];
         
     }

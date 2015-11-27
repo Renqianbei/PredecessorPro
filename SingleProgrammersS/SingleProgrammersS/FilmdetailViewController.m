@@ -29,6 +29,7 @@ static NSString * ForeshowID = @"ProForeshowTableViewCell";
 @property (strong, nonatomic)  UIHeaderView *headerImageView;
 @property (nonatomic,strong)DownLoadDataSource * datasource;
 @property (nonatomic,strong)DetailInfoModel * detailModel;
+
 @end
 
 @implementation FilmdetailViewController
@@ -44,12 +45,24 @@ static NSString * ForeshowID = @"ProForeshowTableViewCell";
 }
 
 
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.title = self.model.name;
+
+    [self.rootNav setNavigationBarHidden:NO];
+    [self showNavigationBar:NO];
+
+}
+
+-(void)dealloc{
+    
+    NSLog(@"13213");
+    
+}
 
 -(void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];
-  
-
-   
+    [self.rootNav setNavigationBarHidden:YES];
 
 }
 
@@ -62,24 +75,35 @@ static NSString * ForeshowID = @"ProForeshowTableViewCell";
     return _datasource;
 }
 
+-(void)showNavigationBar:(BOOL)ret{
+    
+    UIView * view = [[[self.rootNav.navigationBar subviews][0] subviews][0]  subviews][0];
+    view.hidden = !ret;//还原导航栏
+    
+    UIView * shadleImage = [[self.rootNav.navigationBar subviews][0] subviews][1];
+    shadleImage.hidden = !ret;
+    
+}
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-
+    
+    
     
     HeaderHeight = defaultHeaderHeight;
     
     self.automaticallyAdjustsScrollViewInsets = NO;
-    [self changeAlpha:0];
-    
-    self.title = self.model.name;
     
     
     
+    /**
+     *  创建tableview
+     */
     [self.tableView registerClass:[ProActorsTableViewCell class] forCellReuseIdentifier:actorCellID];
       [self.tableView registerClass:[ProForeshowTableViewCell class] forCellReuseIdentifier:ForeshowID];
-    
-    self.tableView.rowHeight = 120;
     
     self.tableView.frame = self.view.bounds;
     
@@ -90,7 +114,13 @@ static NSString * ForeshowID = @"ProForeshowTableViewCell";
     
     [self.view addSubview:self.tableView];
     
+    
+    
+    /**
+     *  请求数据
+     */
     [self showActivity];
+    
     [self.datasource loadFilmDetailWithId:self.model.film_id complicate:^(BOOL success, id data) {
         
         if (success) {
@@ -110,15 +140,18 @@ static NSString * ForeshowID = @"ProForeshowTableViewCell";
 -(void)refreshView{
     
     
-    [self.headerImageView refreshGradientLayer];
 
     self.headerImageView.model = self.detailModel;
     
     UIView * headerView = [[UIView alloc] initWithFrame:self.headerImageView.bounds];
+ 
     
+
+
     [headerView addSubview:self.headerImageView];
-    self.view.backgroundColor = [UIColor whiteColor];
+    
     self.tableView.tableHeaderView = headerView;
+    
     
     [self.tableView reloadData];
     
@@ -151,6 +184,16 @@ static NSString * ForeshowID = @"ProForeshowTableViewCell";
     }
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (indexPath.row == 0) {
+        return  120;
+    }else{
+        return 135;
+    }
+}
+
+
 -(UITableViewCell * )tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if (indexPath.row == 0) {
@@ -175,6 +218,9 @@ static NSString * ForeshowID = @"ProForeshowTableViewCell";
     // Dispose of any resources that can be recreated.
 }
 
+
+
+#pragma mark scrollDelegate
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
     
@@ -239,6 +285,9 @@ static NSString * ForeshowID = @"ProForeshowTableViewCell";
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma makr header 点击方法
+
 - (IBAction)clickPlay:(id)sender {
     
    
@@ -259,12 +308,14 @@ static NSString * ForeshowID = @"ProForeshowTableViewCell";
         sender.tag = 1;
         self.headerImageView.labelHeight.constant = [self.detailModel.base_info.desc boundingRectWithSize:CGSizeMake(self.headerImageView.width - 20, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName : self.headerImageView.content.font} context:nil].size.height + 20;
        
-        
+        [sender setTitle:@"收起" forState:UIControlStateNormal];
         
     }else {
         //收起
         sender.tag = 0;
         self.headerImageView.labelHeight.constant = defaultHeight;
+        [sender setTitle:@"展开" forState:UIControlStateNormal];
+
     }
     
     HeaderHeight = defaultHeaderHeight +self.headerImageView.labelHeight.constant - 60;
