@@ -23,6 +23,7 @@
     
 //    self.navigationBar.barStyle = UIBarStyleBlack
     ;//黑色
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     
     [self.navigationBar setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithWhite:0 alpha:0.8]] forBarMetrics:UIBarMetricsDefault];
     

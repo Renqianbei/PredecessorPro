@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SingleProgrammersS/FilmdetailViewController.m"
-            timestampString = "470301856.149896"
+            filePath = "SingleProgrammersS/ViewController.m"
+            timestampString = "470631706.73518"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "193"
-            endingLineNumber = "193"
-            landmarkName = "-changeAlpha:"
+            startingLineNumber = "547"
+            endingLineNumber = "547"
+            landmarkName = "-panMYView:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

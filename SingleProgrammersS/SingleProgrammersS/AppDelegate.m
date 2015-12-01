@@ -88,5 +88,21 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+/**
+ *  当前应用程序  被其它程序打开时
+ *
+ *  @param application       <#application description#>
+ *  @param url               通过哪个url打开的
+ *  @param sourceApplication 通过哪个应用打开的 （应用的唯一标识）
+ *  @param annotation        不知道
+ *
+ *  @return 。。。
+ */
+-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+    
+    NSLog(@"%@==%@==%@==%@",application,url,sourceApplication,annotation);
+    
+    return NO;
+}
 
 @end

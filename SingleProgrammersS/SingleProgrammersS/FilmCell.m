@@ -7,7 +7,7 @@
 //
 
 #import "FilmCell.h"
-
+#import "CommonMacro.h"
 #import <UIImageView+AFNetworking.h>
 @implementation FilmCell
 
@@ -17,6 +17,7 @@
     //更新内容
     
     self.scoreLabel.text = model.score;
+    self.name.text = model.name;
     
     [self.filmImageView setImageWithURL:[NSURL URLWithString:model.poster_url]];
 
@@ -26,6 +27,15 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    
+    CAGradientLayer * gradientLayer= [[CAGradientLayer alloc] init];
+    
+    gradientLayer.colors = @[(id)[[UIColor clearColor] CGColor],(id)[[UIColor blackColor] CGColor]];
+    
+    gradientLayer.frame = CGRectMake(0, FirstCellHeight - 150, KScreenWidth , 150 );
+    
+    [self.contentView.layer insertSublayer:gradientLayer above:self.filmImageView.layer];
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

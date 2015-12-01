@@ -188,6 +188,8 @@ typedef enum viewType{
         
         _tableView.tableFooterView = [UIView new];
         
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.tag = i + tableTag ;
@@ -267,7 +269,7 @@ typedef enum viewType{
     if (tableView.tag == tableTag + LIST) {
         return 230;
     }
-    return 200;
+    return FirstCellHeight;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -585,21 +587,22 @@ CATransform3D  ProTransFormWithCenterOffset(CGPoint center , CATransform3D trans
                     if (offset > 0) {//下翻
                         if (velocityPoint.y>0) {//趋势向下
                             endangle = -M_PI_2 ; //显示top
-                            [self hiddenTop:NO Bottom:YES];
                         }else {
                             endangle = 0;
                         }
                         
+                        [self hiddenTop:NO Bottom:YES];
+
                     }else {//上翻
                        
                         if (velocityPoint.y<0) {//趋势向上
                             endangle = M_PI_2;//显示bottom
-                            [self hiddenTop:YES Bottom:NO];
 
                         }else {
                             endangle = 0;
                         }
-                        
+                        [self hiddenTop:YES Bottom:NO];
+
                     }
                     
                 }

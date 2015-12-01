@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "FilmModel.h"
+
+#define FirstCellHeight  200
+
 @interface FilmCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *filmImageView;
 
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
+@property (weak, nonatomic) IBOutlet UILabel *name;
 
 
 -(void)refreshWithModel:(FilmModel *)model;
