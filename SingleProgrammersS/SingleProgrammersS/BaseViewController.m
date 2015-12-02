@@ -20,6 +20,12 @@
     
 }
 
+-(void)dealloc{
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -27,16 +33,28 @@
     self.automaticallyAdjustsScrollViewInsets
     = YES;
     // Do any additional setup after loading the view.
+     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillSHow:) name:UIKeyboardWillShowNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+
 }
 
+-(void)keyboardWillSHow:(NSNotification  *)notification{
+    
+}
+
+-(void)keyboardWillHide:(NSNotification  *)notification{
+    
+}
 
 
 -(UITableView *)tableView{
     
     if (_tableView == nil) {
         
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, KScreenHeight - TabHeight - TopOffSet) style:UITableViewStylePlain];
-        
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, KScreenHeight - TabHeight) style:UITableViewStylePlain];
+        _tableView.tableFooterView = [UIView new];
+
         _tableView.delegate = self;
         _tableView.dataSource = self;
         
@@ -112,16 +130,16 @@
 -(UIBarButtonItem * )itemWithSelector:(SEL)selector title:(NSString*)title{
     
    
-    UIButton * button = [UIButton buttonWithType:UIButtonTypeSystem];
-    button.frame = CGRectMake(0, 0, 60, 35);
-
+//    UIButton * button = [UIButton buttonWithType:UIButtonTypeSystem];
+//    button.frame = CGRectMake(0, 0, 60, 35);
+//
+//    
+//    [button addTarget:self action:selector forControlEvents:UIControlEventTouchUpInside];
+//    
+//    [button setTitle:title forState:UIControlStateNormal];
+//    
     
-    [button addTarget:self action:selector forControlEvents:UIControlEventTouchUpInside];
-    
-    [button setTitle:title forState:UIControlStateNormal];
-    
-    
-    UIBarButtonItem * item = [[UIBarButtonItem alloc] initWithCustomView:button];
+    UIBarButtonItem * item = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:self action:@selector(clickRight:)];
     
     
     return item;

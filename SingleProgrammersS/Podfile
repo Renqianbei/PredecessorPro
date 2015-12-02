@@ -4,6 +4,7 @@
 target 'SingleProgrammersS' do
 # Uncomment this line to define a global platform for your projectd
 pod  'AFNetworking', '~> 2.6.3'
+pod 'EaseMobSDK', :git => 'https://github.com/easemob/sdk-ios-cocoapods.git'
 end
 
 target 'SingleProgrammersSTests' do

@@ -40,4 +40,10 @@
 //展示提示信息
 -(void)showToast:(NSString*)text;
 
+
+
+-(void)keyboardWillSHow:(NSNotification  *)notification;
+
+-(void)keyboardWillHide:(NSNotification  *)notification;
+
 @end

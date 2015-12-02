@@ -51,6 +51,22 @@
 		635D57811C0705B200EA2CBF /* ProActorsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 635D577F1C0705B200EA2CBF /* ProActorsTableViewCell.xib */; };
 		635D57851C0705DA00EA2CBF /* ProForeshowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 635D57831C0705DA00EA2CBF /* ProForeshowTableViewCell.m */; };
 		635D57861C0705DA00EA2CBF /* ProForeshowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 635D57841C0705DA00EA2CBF /* ProForeshowTableViewCell.xib */; };
+		638DE3F41C0EA387007A854D /* ProThirdManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 638DE3F31C0EA387007A854D /* ProThirdManager.m */; };
+		638DE3F71C0ED096007A854D /* ProChater.m in Sources */ = {isa = PBXBuildFile; fileRef = 638DE3F61C0ED096007A854D /* ProChater.m */; };
+		638DE3FA1C0ED266007A854D /* ProUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 638DE3F91C0ED266007A854D /* ProUserManager.m */; };
+		638DE4061C0ED7C8007A854D /* 10_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 638DE3FD1C0ED7C8007A854D /* 10_1.jpg */; };
+		638DE4071C0ED7C8007A854D /* 10_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 638DE3FE1C0ED7C8007A854D /* 10_2.jpg */; };
+		638DE4081C0ED7C8007A854D /* 10_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 638DE3FF1C0ED7C8007A854D /* 10_3.jpg */; };
+		638DE4091C0ED7C8007A854D /* 10_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 638DE4001C0ED7C8007A854D /* 10_4.jpg */; };
+		638DE40A1C0ED7C8007A854D /* 10_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 638DE4011C0ED7C8007A854D /* 10_5.jpg */; };
+		638DE40B1C0ED7C8007A854D /* talk1_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 638DE4021C0ED7C8007A854D /* talk1_bg.png */; };
+		638DE40C1C0ED7C8007A854D /* talk1_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 638DE4031C0ED7C8007A854D /* talk1_bg@2x.png */; };
+		638DE40D1C0ED7C8007A854D /* talk2_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 638DE4041C0ED7C8007A854D /* talk2_bg.png */; };
+		638DE40E1C0ED7C8007A854D /* talk2_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 638DE4051C0ED7C8007A854D /* talk2_bg@2x.png */; };
+		638DE4111C0ED812007A854D /* ChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 638DE4101C0ED812007A854D /* ChatCell.m */; };
+		638DE4151C0ED876007A854D /* ProChatDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638DE4131C0ED876007A854D /* ProChatDetailViewController.m */; };
+		638DE4191C0ED900007A854D /* MessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 638DE4181C0ED900007A854D /* MessageModel.m */; };
+		638DE41C1C0EE382007A854D /* ProChatManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 638DE41B1C0EE382007A854D /* ProChatManager.m */; };
 		63F7F32D1C05B808006CD036 /* DownLoadDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F7F3271C05B808006CD036 /* DownLoadDataSource.m */; };
 		63F7F32E1C05B808006CD036 /* FilmCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F7F3291C05B808006CD036 /* FilmCell.m */; };
 		63F7F32F1C05B808006CD036 /* FilmCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63F7F32A1C05B808006CD036 /* FilmCell.xib */; };
@@ -160,6 +176,30 @@
 		635D57821C0705DA00EA2CBF /* ProForeshowTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProForeshowTableViewCell.h; sourceTree = "<group>"; };
 		635D57831C0705DA00EA2CBF /* ProForeshowTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProForeshowTableViewCell.m; sourceTree = "<group>"; };
 		635D57841C0705DA00EA2CBF /* ProForeshowTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProForeshowTableViewCell.xib; sourceTree = "<group>"; };
+		638DE3F21C0EA387007A854D /* ProThirdManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProThirdManager.h; sourceTree = "<group>"; };
+		638DE3F31C0EA387007A854D /* ProThirdManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProThirdManager.m; sourceTree = "<group>"; };
+		638DE3F51C0ED096007A854D /* ProChater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProChater.h; sourceTree = "<group>"; };
+		638DE3F61C0ED096007A854D /* ProChater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProChater.m; sourceTree = "<group>"; };
+		638DE3F81C0ED266007A854D /* ProUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProUserManager.h; sourceTree = "<group>"; };
+		638DE3F91C0ED266007A854D /* ProUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProUserManager.m; sourceTree = "<group>"; };
+		638DE3FC1C0ED35D007A854D /* ProManagerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProManagerProtocol.h; sourceTree = "<group>"; };
+		638DE3FD1C0ED7C8007A854D /* 10_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10_1.jpg; sourceTree = "<group>"; };
+		638DE3FE1C0ED7C8007A854D /* 10_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10_2.jpg; sourceTree = "<group>"; };
+		638DE3FF1C0ED7C8007A854D /* 10_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10_3.jpg; sourceTree = "<group>"; };
+		638DE4001C0ED7C8007A854D /* 10_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10_4.jpg; sourceTree = "<group>"; };
+		638DE4011C0ED7C8007A854D /* 10_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10_5.jpg; sourceTree = "<group>"; };
+		638DE4021C0ED7C8007A854D /* talk1_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = talk1_bg.png; sourceTree = "<group>"; };
+		638DE4031C0ED7C8007A854D /* talk1_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "talk1_bg@2x.png"; sourceTree = "<group>"; };
+		638DE4041C0ED7C8007A854D /* talk2_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = talk2_bg.png; sourceTree = "<group>"; };
+		638DE4051C0ED7C8007A854D /* talk2_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "talk2_bg@2x.png"; sourceTree = "<group>"; };
+		638DE40F1C0ED812007A854D /* ChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatCell.h; sourceTree = "<group>"; };
+		638DE4101C0ED812007A854D /* ChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatCell.m; sourceTree = "<group>"; };
+		638DE4121C0ED876007A854D /* ProChatDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProChatDetailViewController.h; sourceTree = "<group>"; };
+		638DE4131C0ED876007A854D /* ProChatDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProChatDetailViewController.m; sourceTree = "<group>"; };
+		638DE4171C0ED900007A854D /* MessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageModel.h; sourceTree = "<group>"; };
+		638DE4181C0ED900007A854D /* MessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageModel.m; sourceTree = "<group>"; };
+		638DE41A1C0EE382007A854D /* ProChatManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProChatManager.h; sourceTree = "<group>"; };
+		638DE41B1C0EE382007A854D /* ProChatManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProChatManager.m; sourceTree = "<group>"; };
 		63F7F3261C05B808006CD036 /* DownLoadDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoadDataSource.h; sourceTree = "<group>"; };
 		63F7F3271C05B808006CD036 /* DownLoadDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoadDataSource.m; sourceTree = "<group>"; };
 		63F7F3281C05B808006CD036 /* FilmCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilmCell.h; sourceTree = "<group>"; };
@@ -217,6 +257,15 @@
 			children = (
 				63298F721C03202B008AB241 /* 11_1.jpg */,
 				63298F731C03202B008AB241 /* 11_2.jpg */,
+				638DE3FD1C0ED7C8007A854D /* 10_1.jpg */,
+				638DE3FE1C0ED7C8007A854D /* 10_2.jpg */,
+				638DE3FF1C0ED7C8007A854D /* 10_3.jpg */,
+				638DE4001C0ED7C8007A854D /* 10_4.jpg */,
+				638DE4011C0ED7C8007A854D /* 10_5.jpg */,
+				638DE4021C0ED7C8007A854D /* talk1_bg.png */,
+				638DE4031C0ED7C8007A854D /* talk1_bg@2x.png */,
+				638DE4041C0ED7C8007A854D /* talk2_bg.png */,
+				638DE4051C0ED7C8007A854D /* talk2_bg@2x.png */,
 				63322AEF1C02B60300340F75 /* SingleProgrammersS */,
 				63322B091C02B60300340F75 /* SingleProgrammersSTests */,
 				63322AEE1C02B60300340F75 /* Products */,
@@ -237,6 +286,7 @@
 		63322AEF1C02B60300340F75 /* SingleProgrammersS */ = {
 			isa = PBXGroup;
 			children = (
+				638DE3FB1C0ED2D4007A854D /* manager */,
 				635D577C1C07057500EA2CBF /* cellView */,
 				63F7F3251C05B7D1006CD036 /* Model */,
 				6333E2521C0566370019621A /* Class+category */,
@@ -303,6 +353,8 @@
 		6333E2051C0561E00019621A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				63F7F3411C05B871006CD036 /* FilmdetailViewController.h */,
+				63F7F3421C05B871006CD036 /* FilmdetailViewController.m */,
 				63F7F3311C05B823006CD036 /* ViewController.h */,
 				63F7F3321C05B823006CD036 /* ViewController.m */,
 				6333E2061C0562000019621A /* ProChatViewController.h */,
@@ -313,6 +365,8 @@
 				6333E20D1C0562320019621A /* ProOtherViewController.m */,
 				6333E20F1C0562420019621A /* ProSetViewController.h */,
 				6333E2101C0562420019621A /* ProSetViewController.m */,
+				638DE4121C0ED876007A854D /* ProChatDetailViewController.h */,
+				638DE4131C0ED876007A854D /* ProChatDetailViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -446,6 +500,11 @@
 		635D577C1C07057500EA2CBF /* cellView */ = {
 			isa = PBXGroup;
 			children = (
+				638DE40F1C0ED812007A854D /* ChatCell.h */,
+				638DE4101C0ED812007A854D /* ChatCell.m */,
+				635D57741C06E45000EA2CBF /* UIHeaderView.h */,
+				635D57751C06E45000EA2CBF /* UIHeaderView.m */,
+				635D57771C06E46A00EA2CBF /* UIHeaderView.xib */,
 				63F7F3361C05B867006CD036 /* ListCollectionViewCell.h */,
 				63F7F3371C05B867006CD036 /* ListCollectionViewCell.m */,
 				63F7F3381C05B867006CD036 /* ListCollectionViewCell.xib */,
@@ -465,14 +524,25 @@
 			name = cellView;
 			sourceTree = "<group>";
 		};
+		638DE3FB1C0ED2D4007A854D /* manager */ = {
+			isa = PBXGroup;
+			children = (
+				638DE3F81C0ED266007A854D /* ProUserManager.h */,
+				638DE3F91C0ED266007A854D /* ProUserManager.m */,
+				638DE3F21C0EA387007A854D /* ProThirdManager.h */,
+				638DE3F31C0EA387007A854D /* ProThirdManager.m */,
+				638DE3FC1C0ED35D007A854D /* ProManagerProtocol.h */,
+				638DE41A1C0EE382007A854D /* ProChatManager.h */,
+				638DE41B1C0EE382007A854D /* ProChatManager.m */,
+			);
+			name = manager;
+			sourceTree = "<group>";
+		};
 		63F7F3251C05B7D1006CD036 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				635D57741C06E45000EA2CBF /* UIHeaderView.h */,
-				635D57751C06E45000EA2CBF /* UIHeaderView.m */,
-				635D57771C06E46A00EA2CBF /* UIHeaderView.xib */,
-				63F7F3411C05B871006CD036 /* FilmdetailViewController.h */,
-				63F7F3421C05B871006CD036 /* FilmdetailViewController.m */,
+				638DE4171C0ED900007A854D /* MessageModel.h */,
+				638DE4181C0ED900007A854D /* MessageModel.m */,
 				63F7F3341C05B867006CD036 /* FilmListModel.h */,
 				63F7F3351C05B867006CD036 /* FilmListModel.m */,
 				63F7F3261C05B808006CD036 /* DownLoadDataSource.h */,
@@ -485,6 +555,8 @@
 				6300557F1C06A6EC0058D658 /* ProActors.m */,
 				630055811C06A7090058D658 /* ProFilmDetailModel.h */,
 				630055821C06A7090058D658 /* ProFilmDetailModel.m */,
+				638DE3F51C0ED096007A854D /* ProChater.h */,
+				638DE3F61C0ED096007A854D /* ProChater.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -510,6 +582,7 @@
 				63322AEA1C02B60300340F75 /* Frameworks */,
 				63322AEB1C02B60300340F75 /* Resources */,
 				3229B5ED20003CB35620C58D /* Copy Pods Resources */,
+				346944D84907E825C9094C7C /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -582,6 +655,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				63322AFC1C02B60300340F75 /* Main.storyboard in Resources */,
+				638DE4061C0ED7C8007A854D /* 10_1.jpg in Resources */,
+				638DE40B1C0ED7C8007A854D /* talk1_bg.png in Resources */,
+				638DE4081C0ED7C8007A854D /* 10_3.jpg in Resources */,
 				6333E21F1C0564C30019621A /* DJRefresh.bundle in Resources */,
 				635D57861C0705DA00EA2CBF /* ProForeshowTableViewCell.xib in Resources */,
 				635D57811C0705B200EA2CBF /* ProActorsTableViewCell.xib in Resources */,
@@ -590,9 +666,15 @@
 				63F7F3401C05B867006CD036 /* ListTableViewCell.xib in Resources */,
 				635D57781C06E46A00EA2CBF /* UIHeaderView.xib in Resources */,
 				63322B011C02B60300340F75 /* LaunchScreen.xib in Resources */,
+				638DE4091C0ED7C8007A854D /* 10_4.jpg in Resources */,
+				638DE40D1C0ED7C8007A854D /* talk2_bg.png in Resources */,
 				63322AFE1C02B60300340F75 /* Images.xcassets in Resources */,
+				638DE40A1C0ED7C8007A854D /* 10_5.jpg in Resources */,
 				63F7F33E1C05B867006CD036 /* ListCollectionViewCell.xib in Resources */,
+				638DE40E1C0ED7C8007A854D /* talk2_bg@2x.png in Resources */,
+				638DE40C1C0ED7C8007A854D /* talk1_bg@2x.png in Resources */,
 				63F7F32F1C05B808006CD036 /* FilmCell.xib in Resources */,
+				638DE4071C0ED7C8007A854D /* 10_2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,6 +718,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SingleProgrammersS/Pods-SingleProgrammersS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		346944D84907E825C9094C7C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SingleProgrammersS/Pods-SingleProgrammersS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -646,16 +743,20 @@
 				6303D4741C08372000182298 /* UIImage+Pro_Image.m in Sources */,
 				6333E2481C0565080019621A /* JSONHTTPClient.m in Sources */,
 				6333E2501C05652F0019621A /* BaseViewController.m in Sources */,
+				638DE4111C0ED812007A854D /* ChatCell.m in Sources */,
 				6333E2431C0565080019621A /* JSONModelArray.m in Sources */,
 				63322B1D1C02EDC500340F75 /* UIView+FastFrame.m in Sources */,
 				63322B191C02ECAC00340F75 /* ProCenterViewcontrolelr.m in Sources */,
+				638DE41C1C0EE382007A854D /* ProChatManager.m in Sources */,
 				63F7F32E1C05B808006CD036 /* FilmCell.m in Sources */,
 				6333E24A1C0565080019621A /* JSONKeyMapper.m in Sources */,
 				6333E20E1C0562320019621A /* ProOtherViewController.m in Sources */,
 				6333E2551C0566CA0019621A /* UIColor+UIColor_category.m in Sources */,
 				6300557D1C06A6A40058D658 /* ProVideoModel.m in Sources */,
+				638DE3F41C0EA387007A854D /* ProThirdManager.m in Sources */,
 				6333E2221C0564C30019621A /* DJRefreshTopView.m in Sources */,
 				63322AF61C02B60300340F75 /* AppDelegate.m in Sources */,
+				638DE3FA1C0ED266007A854D /* ProUserManager.m in Sources */,
 				6333E2201C0564C30019621A /* DJRefresh.m in Sources */,
 				63F7F33F1C05B867006CD036 /* ListTableViewCell.m in Sources */,
 				63F7F3431C05B871006CD036 /* FilmdetailViewController.m in Sources */,
@@ -671,7 +772,9 @@
 				6333E24B1C0565080019621A /* JSONValueTransformer.m in Sources */,
 				63F7F33D1C05B867006CD036 /* ListCollectionViewCell.m in Sources */,
 				6333E2111C0562420019621A /* ProSetViewController.m in Sources */,
+				638DE4151C0ED876007A854D /* ProChatDetailViewController.m in Sources */,
 				630055801C06A6EC0058D658 /* ProActors.m in Sources */,
+				638DE3F71C0ED096007A854D /* ProChater.m in Sources */,
 				6333E2471C0565080019621A /* JSONAPI.m in Sources */,
 				63F7F3331C05B823006CD036 /* ViewController.m in Sources */,
 				630055831C06A7090058D658 /* ProFilmDetailModel.m in Sources */,
@@ -683,6 +786,7 @@
 				63F7F3301C05B808006CD036 /* FilmModel.m in Sources */,
 				6333E20B1C0562200019621A /* ProMainViewController.m in Sources */,
 				635D57851C0705DA00EA2CBF /* ProForeshowTableViewCell.m in Sources */,
+				638DE4191C0ED900007A854D /* MessageModel.m in Sources */,
 				635D57761C06E45000EA2CBF /* UIHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -811,13 +915,14 @@
 			baseConfigurationReference = 0959479427B6F92E2F2BAB7D /* Pods-SingleProgrammersS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Liangliang Chu (7LVN55AF5A)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: LC LC (ZN9C7APJ9Z)";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SingleProgrammersS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhonglie;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b81579c3-5f18-4d09-86de-46ce7bf2f691";
+				PROVISIONING_PROFILE = "f337a657-d992-4f34-a24d-f5c863ce86d5";
 			};
 			name = Debug;
 		};
@@ -826,13 +931,14 @@
 			baseConfigurationReference = 7403C7D29FEE41B6E49C9F6D /* Pods-SingleProgrammersS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Liangliang Chu (7LVN55AF5A)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: LC LC (ZN9C7APJ9Z)";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SingleProgrammersS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhonglie;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b81579c3-5f18-4d09-86de-46ce7bf2f691";
+				PROVISIONING_PROFILE = "f337a657-d992-4f34-a24d-f5c863ce86d5";
 			};
 			name = Release;
 		};
