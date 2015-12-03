@@ -22,10 +22,12 @@
 #define  CenterType    YES
 
 @interface ProCenterViewcontrolelr ()<UIScrollViewDelegate>
+{
+    BOOL _isTrainsAnimationing;
+}
 
 @property(nonatomic,strong)UIPanGestureRecognizer * panGesture;
 @property(nonatomic,strong)UIButton * mengBan;
-
 
 
 @end
@@ -48,7 +50,7 @@
     [super viewDidLoad];
     
     
-    
+    _isTrainsAnimationing = NO;
     //    self.view.backgroundColor = [UIColor blackColor];
     
     // Do any additional setup after loading the view.
@@ -206,6 +208,9 @@
 
 - (void)panView:(UIPanGestureRecognizer *)pan{
     
+    if (_isTrainsAnimationing) {
+        return ;
+    }
     CGPoint point = [pan locationInView:self.view];
     
     
@@ -302,7 +307,7 @@
 - (void)showCenter:(BOOL)center  animation:(BOOL)animation{
     
     
-    
+    _isTrainsAnimationing = YES;
     
     if ([self.delegate respondsToSelector:@selector(willShowViewControlelerAtIndex:inCenterViewController:)]) {
         
@@ -367,6 +372,8 @@
                             
                         }
                         
+                        _isTrainsAnimationing = NO;
+
                     }];
                     
                     
@@ -425,6 +432,8 @@
                             [self.delegate didShowViewControlelerAtIndex:0 inCenterViewController:self];
                             
                         }
+                        _isTrainsAnimationing = NO;
+
                     }];
                     
                 }
@@ -451,7 +460,7 @@
                 } completion:^(BOOL finished) {
                     [self complicateShowCenter:center];
 
-                    
+
                 }];
                 
                 }else {
@@ -497,6 +506,8 @@
 
 -(void)complicateShowCenter:(BOOL)show{
    
+    _isTrainsAnimationing = NO;
+
     self.showCenter = show;
 
     if (show) {

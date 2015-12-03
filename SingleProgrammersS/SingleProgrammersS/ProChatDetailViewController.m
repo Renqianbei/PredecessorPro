@@ -29,6 +29,8 @@ static NSString * cellIdentifier = @"cellIndetifierone";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = self.chater.username;
+    
     [self addTableView];
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveMessageModel:) name:ReceivieMessageNotification object:nil];
@@ -45,6 +47,7 @@ static NSString * cellIdentifier = @"cellIndetifierone";
     
     //滚到最后一行
     [self scrollToBottom];
+    self.automaticallyAdjustsScrollViewInsets = YES;
 
     // Do any additional setup after loading the view from its nib.
 }

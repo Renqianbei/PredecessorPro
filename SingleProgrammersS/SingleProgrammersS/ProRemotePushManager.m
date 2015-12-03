@@ -25,7 +25,7 @@
     }
     
     
-    [UIApplication sharedApplication].applicationIconBadgeNumber = 1;
+    [UIApplication sharedApplication].applicationIconBadgeNumber --;
     
     //判断当前显示的是否是 对应消息的聊天页  不是就跳转 是就 不动
     
