@@ -49,7 +49,7 @@
     
     
     
-//    self.view.backgroundColor = [UIColor blackColor];
+    //    self.view.backgroundColor = [UIColor blackColor];
     
     // Do any additional setup after loading the view.
     
@@ -64,7 +64,7 @@
         [self.view addGestureRecognizer:self.panGesture];
     }else{
         [self.view removeGestureRecognizer:self.panGesture];
-
+        
     }
 }
 
@@ -86,7 +86,7 @@
     
     if (_panGesture == nil) {
         _panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panView:)];
-
+        
     }
     return _panGesture;
 }
@@ -106,7 +106,7 @@
     
     [self.leftViewcontroller viewWillAppear:YES];
     
-   
+    
     
     switch (self.type ) {
         case Scare:
@@ -117,10 +117,10 @@
             
             self.centerViewcontroller.view.frame = CGRectMake(0, 0, self.view.width, self.view.height);
             self.leftViewcontroller.view.transform = CGAffineTransformMakeScale(KMaxScare, KMaxScare);
-           
+            
             [self.centerViewcontroller.view addSubview:self.mengBan];
             
-
+            
         }
             break;
         case Fold:
@@ -140,6 +140,8 @@
     [self.centerViewcontroller viewDidAppear:YES];
     self.centerViewcontroller.view.hidden = NO;
     self.leftViewcontroller.view.hidden = YES;
+    [self addChildViewController:self.centerViewcontroller];
+
     self.showCenter = YES;
     
 }
@@ -173,7 +175,6 @@
         
         [self.view addSubview:vc.view];
         
-        [self addChildViewController:vc];
         
     }
     
@@ -220,14 +221,14 @@
             
             self.centerViewcontroller.view.hidden = NO;
             self.leftViewcontroller.view.hidden = NO;
-
+            
             if (self.isShowCenter) {
                 [self.leftViewcontroller viewWillAppear:YES];
                 [self.centerViewcontroller viewWillDisappear:YES];
             }else{
                 [self.centerViewcontroller viewWillAppear:YES];
                 [self.leftViewcontroller viewWillDisappear:YES];
-
+                
             }
         }
             break;
@@ -356,7 +357,7 @@
                         self.centerViewcontroller.view.transform = CGAffineTransformIdentity;
                         
                         self.mengBan.alpha = 0;
-
+                        
                     }completion:^(BOOL finished) {
                         self.showCenter = YES;
                         
@@ -429,66 +430,57 @@
                 }
                 
             }
-
+            
         }
             break;
         case Fold:
         {
+            
+            
             //折叠效果
             
             if (center) {
                 
                 
+                if (animation) {
+                    
                 
                 [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.3 initialSpringVelocity:3 options:UIViewAnimationOptionLayoutSubviews animations:^{
                     [self rotationWithAngle:0];
-
+                    
                 } completion:^(BOOL finished) {
+                    [self complicateShowCenter:center];
+
                     
-                    self.showCenter = YES;
-                    if ([self.delegate respondsToSelector:@selector(didShowViewControlelerAtIndex:inCenterViewController:)]) {
-                        
-                        [self.delegate didShowViewControlelerAtIndex:1 inCenterViewController:self];
-                        
-                    }
-                    
-                    [self.centerViewcontroller viewDidAppear:YES];
-                    self.centerViewcontroller.view.userInteractionEnabled = YES;
-                    
-                    
-                    [self.leftViewcontroller viewDidDisappear:YES];
-                    self.leftViewcontroller.view.userInteractionEnabled = NO;
-                    
-                    self.leftViewcontroller.view.hidden = YES;
                 }];
                 
-            
+                }else {
+                    [self rotationWithAngle:0];
+                    [self complicateShowCenter:center];
+
+                }
+                
             }else{
                 
-              
-                
-                [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.3 initialSpringVelocity:3 options:UIViewAnimationOptionLayoutSubviews animations:^{
-                   
+                if (animation) {
+                    [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.3 initialSpringVelocity:3 options:UIViewAnimationOptionLayoutSubviews animations:^{
+                        
+                        [self rotationWithAngle:M_PI_2];
+                        
+                    } completion:^(BOOL finished) {
+                        
+                        [self complicateShowCenter:center];
+                        
+                    }];
+                }else{
                     [self rotationWithAngle:M_PI_2];
- 
-                } completion:^(BOOL finished) {
-                    self.showCenter = NO;
-                    
-                    if ([self.delegate respondsToSelector:@selector(didShowViewControlelerAtIndex:inCenterViewController:)]) {
-                        
-                        [self.delegate didShowViewControlelerAtIndex:0 inCenterViewController:self];
-                        
-                    }
-                    [self.leftViewcontroller viewDidAppear:YES];
-                    [self.centerViewcontroller viewDidDisappear:YES];
-                    
-                    self.centerViewcontroller.view.userInteractionEnabled = NO;
-                    self.leftViewcontroller.view.userInteractionEnabled = YES;
-                    self.centerViewcontroller.view.hidden = YES;
+                    [self complicateShowCenter:center];
 
-
-                }];
+                }
+                
+                
             }
+            
             
             
         }
@@ -499,11 +491,57 @@
     }
     
     
-        
     
     
 }
 
+-(void)complicateShowCenter:(BOOL)show{
+   
+    self.showCenter = show;
+
+    if (show) {
+        
+        if ([self.delegate respondsToSelector:@selector(didShowViewControlelerAtIndex:inCenterViewController:)]) {
+            
+            [self.delegate didShowViewControlelerAtIndex:1 inCenterViewController:self];
+            
+        }
+        
+        [self.centerViewcontroller viewDidAppear:YES];
+        self.centerViewcontroller.view.userInteractionEnabled = YES;
+        self.centerViewcontroller.view.layer.transform = CATransform3DIdentity;
+        
+        [self.leftViewcontroller viewDidDisappear:YES];
+        self.leftViewcontroller.view.userInteractionEnabled = NO;
+        
+        self.leftViewcontroller.view.hidden = YES;
+        self.centerViewcontroller.view.hidden = NO;
+        [self.leftViewcontroller removeFromParentViewController];
+        [self addChildViewController:self.centerViewcontroller];
+    }
+    else {
+        
+        if ([self.delegate respondsToSelector:@selector(didShowViewControlelerAtIndex:inCenterViewController:)]) {
+            
+            [self.delegate didShowViewControlelerAtIndex:0 inCenterViewController:self];
+            
+        }
+        [self.leftViewcontroller viewDidAppear:YES];
+        self.leftViewcontroller.view.layer.transform = CATransform3DIdentity;
+
+        [self.centerViewcontroller viewDidDisappear:YES];
+        
+        self.centerViewcontroller.view.userInteractionEnabled = NO;
+        self.leftViewcontroller.view.userInteractionEnabled = YES;
+       
+        self.centerViewcontroller.view.hidden = YES;
+        self.leftViewcontroller.view.hidden = NO;
+
+        [self.centerViewcontroller removeFromParentViewController];
+        [self addChildViewController:self.leftViewcontroller];
+
+    }
+}
 
 /**
  *  设置 变形
@@ -516,8 +554,8 @@
         case Scare:
         {
             //侧滑放大缩小效果
-
-
+            
+            
             float scare = 1- offset/KMoveWith;//
             
             
@@ -561,7 +599,7 @@
             
             
             self.leftViewcontroller.view.transform = CGAffineTransformTranslate(leftscareTransform, self.view.width*(KMaxScare - leftScare)*2, 0);
-
+            
         }
             break;
         case Fold:
@@ -586,7 +624,7 @@
             if (_showCenter == NO && offset>0) {
                 return;
             }
-        
+            
             
             [self rotationWithAngle:angle];
             
@@ -614,7 +652,7 @@ CATransform3D CATransform3DMakePerspective(CGPoint center, float disZ)
     CATransform3D transBack = CATransform3DMakeTranslation(center.x, center.y, 0);
     CATransform3D scale = CATransform3DIdentity;
     scale.m34 = -1.0f/disZ;     // 设置M34就有立体感(近大远小)。 -1 / z ,z表示观察者在z轴上的值,z越小，看起来离我们越近，东西越大。
-
+    
     
     return CATransform3DConcat(CATransform3DConcat(transToCenter, scale), transBack);
 }
@@ -634,10 +672,10 @@ CATransform3D CATransform3DPerspect(CATransform3D t, CGPoint center, float disZ)
     
     CATransform3D move0 = CATransform3DMakeTranslation(0, 0, self.view.frame.size.width/2);
     CATransform3D move1 = CATransform3DMakeTranslation(0, 0, self.view.frame.size.width/2);
-
+    
     CATransform3D back0 = CATransform3DMakeTranslation(0, 0, -self.view.frame.size.width/2);
     CATransform3D back1 = CATransform3DMakeTranslation(0, 0, -self.view.frame.size.width/2);
-
+    
     CATransform3D rotate0 = CATransform3DMakeRotation(angle, 0, 1, 0);
     CATransform3D rotate1 = CATransform3DMakeRotation(-M_PI_2  + angle, 0, 1, 0);
     
@@ -647,7 +685,7 @@ CATransform3D CATransform3DPerspect(CATransform3D t, CGPoint center, float disZ)
     
     self.centerViewcontroller.view.layer.transform = CATransform3DPerspect(mat0, CGPointZero, 1000);
     self.leftViewcontroller.view.layer.transform = CATransform3DPerspect(mat1, CGPointZero, 1000);
-
+    
 }
 
 

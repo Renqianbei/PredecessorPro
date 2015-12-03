@@ -182,6 +182,7 @@ static NSString * cellIdentifier = @"cellIndetifierone";
             [self showToast:@"发送失败"];
             
         }else{
+            textField.text = nil;
             [_messages addObject:model];
             
             [self.tableView  insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:_messages.count-1 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];

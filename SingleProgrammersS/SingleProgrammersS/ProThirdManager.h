@@ -10,6 +10,10 @@
 #import <UIKit/UIKit.h>
 
 #import <EaseMobSDK/EaseMob.h>
+
+/**
+ *  第三方 相关信息处理类
+ */
 @interface ProThirdManager : NSObject
 
 +(void)registerThirdSDKWithApplication:(UIApplication *)application

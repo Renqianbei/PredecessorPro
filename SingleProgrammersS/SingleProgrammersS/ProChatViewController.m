@@ -21,82 +21,40 @@ static NSString * cellIdentifier = @"cellid";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self createRightItmeWith:@"登陆"];
     
+    self.navigationItem.title = [NSString stringWithFormat:@"%@的好友列表",[ProUserManager shareInstance].user.username];
     
     self.tableView.rowHeight = 200;
-    
-   
-    
-    self.models = [NSMutableArray arrayWithObjects:@"ren",@"liu",nil];
-    
 
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdentifier];
     
-    self.refresh.topEnabled = NO;
+    self.refresh.topEnabled = YES;
     self.refresh.bottomEnabled = NO;
     
     [self.view addSubview:self.tableView];
 
+    [self loadDataComplicate:nil];
     // Do any additional setup after loading the view.
 }
 
-
--(void)clickRight:(UIBarButtonItem *)item{
-    
-    item.enabled = NO;
-    if ([item.title isEqualToString:@"登陆"]) {
-       
-        
-        [[EaseMob sharedInstance ].chatManager asyncLoginWithUsername:@"liu" password:@"123" completion:^(NSDictionary *loginInfo, EMError *error) {
+-(void)loadDataComplicate:(void(^)())complicate{
+   
+    [self showActivity];
+    //获取好友列表
+    [[EaseMob sharedInstance].chatManager asyncFetchBuddyListWithCompletion:^(NSArray *buddyList, EMError *error) {
+        if (!error) {
             
-            if (error == nil) {
-               
-                item.title = @"退出";
-
-                /**
-                 *  登陆成功过后 设置自动登陆
-                 */
-                [self showToast:@"登陆成功"];
-            //保存登陆信息
-        [ProUserManager shareInstance].user = [[ProChater alloc] initWithDictionary:loginInfo error:nil];
-
-                self.title =  [ProUserManager shareInstance].user.username;
-
-                
-            }
-            item.enabled = YES;
-
-            
-        } onQueue:nil];
-    }else{
-        
-        [[EaseMob sharedInstance].chatManager asyncLogoffWithUnbindDeviceToken:YES completion:^(NSDictionary *info, EMError *error) {
-            
-            if (error == nil) {
-                
-                item.title = @"登陆";
-                /**
-                 *  登陆成功过后 设置自动登陆
-                 */
-                [self showToast:@"退出登陆成功"];
-                
-                
-                NSLog(@"%@",info);
-                
-            }
-
-            
-            item.enabled = YES;
-
-        } onQueue:nil];
-        
-
-    }
-    
-    
+            self.models = [NSMutableArray arrayWithArray:buddyList];
+            [self.tableView reloadData];
+        }
+        [self hideActivity];
+        if (complicate) {
+            complicate();
+        }
+    } onQueue:nil];
     
 }
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
     return self.models.count;
@@ -106,8 +64,9 @@ static NSString * cellIdentifier = @"cellid";
     
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
+    EMBuddy * friend = self.models[indexPath.row];
     
-    cell.textLabel.text = self.models[indexPath.row];
+    cell.textLabel.text = friend.username;
     
     
     return cell;
@@ -123,14 +82,15 @@ static NSString * cellIdentifier = @"cellid";
     ProChatDetailViewController * devc = [[ProChatDetailViewController alloc] init];
     
     ProChater * chater = [[ProChater alloc] init];
-    chater.username = self.models[indexPath.row];
+    EMBuddy * friend = self.models[indexPath.row];
+
+    chater.username = friend.username;
    
     devc.chater = chater;
     
     devc.hidesBottomBarWhenPushed = YES;
     
     [self.navigationController pushViewController:devc animated:YES];
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -148,4 +108,10 @@ static NSString * cellIdentifier = @"cellid";
 }
 */
 
+-(void)refresh:(DJRefresh *)refresh didEngageRefreshDirection:(DJRefreshDirection)direction{
+    
+        [self loadDataComplicate:^{
+            [refresh finishRefreshing];
+        }];
+}
 @end

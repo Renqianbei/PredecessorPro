@@ -16,4 +16,5 @@
 @property(nonatomic,strong)NSString * resource;
 @property(nonatomic,strong)NSString * token;
 
+
 @end

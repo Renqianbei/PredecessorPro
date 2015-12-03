@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--其它-->
@@ -16,11 +17,44 @@
                     <view key="view" contentMode="scaleToFill" id="q9r-qW-rSG">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cjo-Yo-QqX">
+                                <rect key="frame" x="40" y="164" width="136" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="136" id="AAv-WU-OS9"/>
+                                    <constraint firstAttribute="height" constant="30" id="ygF-XF-geO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3n-pD-D06">
+                                <rect key="frame" x="40" y="253" width="145" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="145" id="25o-bg-obY"/>
+                                    <constraint firstAttribute="height" constant="30" id="X8X-9A-yKi"/>
+                                </constraints>
+                                <state key="normal" title="添加好友"/>
+                                <connections>
+                                    <action selector="addFriendClick:" destination="WnZ-KD-HVG" eventType="touchUpInside" id="iNN-bU-5Za"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="h3n-pD-D06" firstAttribute="leading" secondItem="q9r-qW-rSG" secondAttribute="leadingMargin" constant="20" id="3fI-e2-Dml"/>
+                            <constraint firstItem="cjo-Yo-QqX" firstAttribute="leading" secondItem="q9r-qW-rSG" secondAttribute="leading" constant="40" id="FfT-3f-FwG"/>
+                            <constraint firstItem="cjo-Yo-QqX" firstAttribute="top" secondItem="x3k-Rl-Ua8" secondAttribute="bottom" constant="100" id="K8n-oh-To4"/>
+                            <constraint firstItem="h3n-pD-D06" firstAttribute="top" secondItem="cjo-Yo-QqX" secondAttribute="bottom" constant="59" id="ihS-GH-MuX"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="其它" id="tyd-d9-IcM"/>
                     <navigationItem key="navigationItem" id="N5u-5f-I4A"/>
+                    <connections>
+                        <outlet property="username" destination="cjo-Yo-QqX" id="6Zl-vp-9Yx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fnS-8g-E2P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

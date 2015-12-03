@@ -9,10 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "ProChater.h"
 #import "ProManagerProtocol.h"
-
+/**
+ *  用户信息
+ */
 @interface ProUserManager : NSObject<ProManagerProtocol>
 
 @property(nonatomic,strong)ProChater * user;
+
 
 
 

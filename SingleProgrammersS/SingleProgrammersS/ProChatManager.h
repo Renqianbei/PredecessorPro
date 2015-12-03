@@ -26,7 +26,26 @@ typedef void(^SendComplicate)(BOOL ret ,id result);
  *  @param complicate 发送回调
  */
 +(void)sendMessage:(NSString *)text to:(NSString*)receiver complicate:(SendComplicate)complicate;
+
 //获取所有聊天信息
 +(NSArray *)loadAllMessageWithChatter:(NSString *)chatter;
+
+
+/**
+ *  注册
+ *
+ *  @param userName  用户名
+ *  @param passworld 密码
+ */
++(void)registureWithUsername:(NSString *)userName passworld:(NSString *)passworld complicate:(SendComplicate)complicate;
+
+
++(void)loginWithUsername:(NSString *)userName passworld:(NSString *)passworld complicate:(SendComplicate)complicate;
+
+/**
+ * 退出登陆  是否取消绑定token号
+ */
++(void)logoutcomplicate:(SendComplicate)complicate UnbindDeviceToken:(BOOL)ret;
+
 
 @end

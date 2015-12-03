@@ -59,6 +59,7 @@ typedef NS_ENUM(NSInteger,SHowType){
 -(UIViewController *)centerViewcontroller;
 
 
+- (void)showCenter:(BOOL)center  animation:(BOOL)animation;
 
 
 

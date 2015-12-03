@@ -7,12 +7,12 @@
 //
 
 #import "AppDelegate.h"
-#import "BaseNavigationViewController.h"
-#import "ViewController.h"
 
 #import "ProThirdManager.h"
-
-#import "ProCenterViewcontrolelr.h"
+#import "ProRemotePushManager.h"
+#import "ProWindowManager.h"
+#import "ProLoginViewController.h"
+#import "ProChatManager.h"
 @interface AppDelegate ()
 
 @end
@@ -25,37 +25,9 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    //容器视图控制器
-    ProCenterViewcontrolelr * centerVC = [[ProCenterViewcontrolelr alloc] init];
-    
-    //主页
-    UIStoryboard * storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     
     
-    UITabBarController * tabVC = [storyBoard instantiateViewControllerWithIdentifier:@"tabBarControllerID"];
-    
-    
-    //电影页
-    ViewController * setVc = [[ViewController alloc] init];
-    
-    BaseNavigationViewController * naVC = [[BaseNavigationViewController alloc] initWithRootViewController:setVc];//设置页
-
-    
-    centerVC.type = Fold;//样式
-    
-    
-    centerVC.viewcontolelrs = @[tabVC,naVC];
-    
-    
-    //为了实现一个功能 最外层添加了 一个导航栏
-    self.navigationVC = [[BaseNavigationViewController alloc] initWithRootViewController:centerVC];
-    
-    
-    [self.navigationVC setNavigationBarHidden:YES];//隐藏导航栏
-    
-    self.window.rootViewController = self.navigationVC;
-
-    
+    [ProWindowManager setLogIN];
     
     UIImageView * imageView = [[UIImageView alloc] initWithFrame:self.window.bounds];
     imageView.image = [UIImage imageNamed:@"11_1.jpg"];
@@ -65,10 +37,16 @@
     [self.window makeKeyAndVisible];
     
     
+    
+
+
     /**
      *  注册第三方相关
      */
     [ProThirdManager registerThirdSDKWithApplication:application options:launchOptions];
+    
+    //处理推送过来的消息
+//    [ProRemotePushManager application:application didReceiveRemoteNotification:launchOptions];
     
     return YES;
 }
@@ -83,11 +61,16 @@
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     [[EaseMob sharedInstance] applicationDidEnterBackground:application];
 
+    [ProChatManager logoutcomplicate:nil UnbindDeviceToken:NO];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     [[EaseMob sharedInstance] applicationWillEnterForeground:application];
+    [ProChatManager loginWithUsername:[ProUserManager shareInstance].user.username passworld:[ProUserManager shareInstance].user.password complicate:^(BOOL ret, id result) {
+        
+    }];
+
 
 }
 
@@ -115,6 +98,30 @@
     NSLog(@"%@==%@==%@==%@",application,url,sourceApplication,annotation);
     
     return NO;
+}
+
+
+
+// 将得到的deviceToken传给SDK
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
+    [[EaseMob sharedInstance] application:application didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
+}
+
+// 注册deviceToken失败
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error{
+    [[EaseMob sharedInstance] application:application didFailToRegisterForRemoteNotificationsWithError:error];
+    NSLog(@"error -- %@",error);
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo NS_AVAILABLE_IOS(3_0) __TVOS_PROHIBITED{
+    
+    NSLog(@"%@",userInfo);
+    
+    //处理推送过来的消息
+    [ProRemotePushManager application:application didReceiveRemoteNotification:userInfo];
+    
+    
+    
 }
 
 @end

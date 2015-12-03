@@ -31,7 +31,7 @@
     
     
     self.automaticallyAdjustsScrollViewInsets
-    = YES;
+    = NO;
     // Do any additional setup after loading the view.
      [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillSHow:) name:UIKeyboardWillShowNotification object:nil];
     

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProLoginViewController">
+            <connections>
+                <outlet property="passworld" destination="s3b-Kn-tm2" id="ySi-2w-G08"/>
+                <outlet property="username" destination="8zu-qM-2tS" id="AhS-4y-eKJ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8zu-qM-2tS">
+                    <rect key="frame" x="224" y="100" width="151" height="30"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="6Jq-7F-AAh"/>
+                        <constraint firstAttribute="width" constant="151" id="phP-t8-oEJ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s3b-Kn-tm2">
+                    <rect key="frame" x="224" y="200" width="151" height="30"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBG-Oa-N8A">
+                    <rect key="frame" x="100" y="285" width="200" height="30"/>
+                    <animations/>
+                    <state key="normal" title="注册"/>
+                    <connections>
+                        <action selector="registerButton:" destination="-1" eventType="touchUpInside" id="lnF-TX-Wy6"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S40-l6-SPY">
+                    <rect key="frame" x="300" y="285" width="200" height="30"/>
+                    <animations/>
+                    <state key="normal" title="登陆"/>
+                    <connections>
+                        <action selector="loginClick:" destination="-1" eventType="touchUpInside" id="nAk-Ca-BJk"/>
+                    </connections>
+                </button>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="8zu-qM-2tS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="1Tj-Jm-CsB"/>
+                <constraint firstItem="lBG-Oa-N8A" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="1i7-dW-IXI"/>
+                <constraint firstItem="s3b-Kn-tm2" firstAttribute="centerX" secondItem="8zu-qM-2tS" secondAttribute="centerX" id="8QD-B2-cJg"/>
+                <constraint firstAttribute="trailing" secondItem="S40-l6-SPY" secondAttribute="trailing" constant="100" id="HPk-Ap-JV1"/>
+                <constraint firstItem="S40-l6-SPY" firstAttribute="leading" secondItem="lBG-Oa-N8A" secondAttribute="trailing" id="MSJ-SS-bf7"/>
+                <constraint firstItem="S40-l6-SPY" firstAttribute="centerY" secondItem="lBG-Oa-N8A" secondAttribute="centerY" id="NNB-pd-vij"/>
+                <constraint firstItem="lBG-Oa-N8A" firstAttribute="height" secondItem="S40-l6-SPY" secondAttribute="height" id="Nr1-0R-kQ3"/>
+                <constraint firstItem="s3b-Kn-tm2" firstAttribute="height" secondItem="8zu-qM-2tS" secondAttribute="height" id="h3n-NN-iCQ"/>
+                <constraint firstItem="s3b-Kn-tm2" firstAttribute="bottom" secondItem="8zu-qM-2tS" secondAttribute="bottom" constant="100" id="igl-vu-hBv"/>
+                <constraint firstItem="8zu-qM-2tS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="pSD-Sf-BPZ"/>
+                <constraint firstItem="s3b-Kn-tm2" firstAttribute="width" secondItem="8zu-qM-2tS" secondAttribute="width" id="qdp-qF-epe"/>
+                <constraint firstItem="lBG-Oa-N8A" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="100" id="tmc-7H-zEb"/>
+                <constraint firstItem="lBG-Oa-N8A" firstAttribute="width" secondItem="S40-l6-SPY" secondAttribute="width" id="wVf-5H-Zww"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

@@ -78,6 +78,10 @@
 		63F7F33F1C05B867006CD036 /* ListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F7F33A1C05B867006CD036 /* ListTableViewCell.m */; };
 		63F7F3401C05B867006CD036 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63F7F33B1C05B867006CD036 /* ListTableViewCell.xib */; };
 		63F7F3431C05B871006CD036 /* FilmdetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F7F3421C05B871006CD036 /* FilmdetailViewController.m */; };
+		63FEAD501C10054E001DDDEB /* ProRemotePushManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FEAD4F1C10054E001DDDEB /* ProRemotePushManager.m */; };
+		63FEAD541C100E9B001DDDEB /* ProLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FEAD521C100E9B001DDDEB /* ProLoginViewController.m */; };
+		63FEAD551C100E9B001DDDEB /* ProLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63FEAD531C100E9B001DDDEB /* ProLoginViewController.xib */; };
+		63FEAD581C1012BE001DDDEB /* ProWindowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FEAD571C1012BE001DDDEB /* ProWindowManager.m */; };
 		C78921C9594ED07B95688FD2 /* libPods-SingleProgrammersS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE06F03EE8F679A8C34340DD /* libPods-SingleProgrammersS.a */; };
 /* End PBXBuildFile section */
 
@@ -219,6 +223,13 @@
 		63F7F33B1C05B867006CD036 /* ListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		63F7F3411C05B871006CD036 /* FilmdetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilmdetailViewController.h; sourceTree = "<group>"; };
 		63F7F3421C05B871006CD036 /* FilmdetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilmdetailViewController.m; sourceTree = "<group>"; };
+		63FEAD4E1C10054E001DDDEB /* ProRemotePushManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProRemotePushManager.h; sourceTree = "<group>"; };
+		63FEAD4F1C10054E001DDDEB /* ProRemotePushManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProRemotePushManager.m; sourceTree = "<group>"; };
+		63FEAD511C100E9B001DDDEB /* ProLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProLoginViewController.h; sourceTree = "<group>"; };
+		63FEAD521C100E9B001DDDEB /* ProLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProLoginViewController.m; sourceTree = "<group>"; };
+		63FEAD531C100E9B001DDDEB /* ProLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProLoginViewController.xib; sourceTree = "<group>"; };
+		63FEAD561C1012BE001DDDEB /* ProWindowManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProWindowManager.h; sourceTree = "<group>"; };
+		63FEAD571C1012BE001DDDEB /* ProWindowManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProWindowManager.m; sourceTree = "<group>"; };
 		7403C7D29FEE41B6E49C9F6D /* Pods-SingleProgrammersS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingleProgrammersS.release.xcconfig"; path = "Pods/Target Support Files/Pods-SingleProgrammersS/Pods-SingleProgrammersS.release.xcconfig"; sourceTree = "<group>"; };
 		BE06F03EE8F679A8C34340DD /* libPods-SingleProgrammersS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SingleProgrammersS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -353,20 +364,12 @@
 		6333E2051C0561E00019621A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				63F7F3411C05B871006CD036 /* FilmdetailViewController.h */,
-				63F7F3421C05B871006CD036 /* FilmdetailViewController.m */,
-				63F7F3311C05B823006CD036 /* ViewController.h */,
-				63F7F3321C05B823006CD036 /* ViewController.m */,
-				6333E2061C0562000019621A /* ProChatViewController.h */,
-				6333E2071C0562000019621A /* ProChatViewController.m */,
-				6333E2091C0562200019621A /* ProMainViewController.h */,
-				6333E20A1C0562200019621A /* ProMainViewController.m */,
-				6333E20C1C0562320019621A /* ProOtherViewController.h */,
-				6333E20D1C0562320019621A /* ProOtherViewController.m */,
-				6333E20F1C0562420019621A /* ProSetViewController.h */,
-				6333E2101C0562420019621A /* ProSetViewController.m */,
-				638DE4121C0ED876007A854D /* ProChatDetailViewController.h */,
-				638DE4131C0ED876007A854D /* ProChatDetailViewController.m */,
+				63FEAD5E1C104138001DDDEB /* 设置页 */,
+				63FEAD5C1C10402C001DDDEB /* 登陆页 */,
+				63FEAD591C103F1A001DDDEB /* 电影 */,
+				63FEAD5A1C103F29001DDDEB /* 聊天页 */,
+				63FEAD5B1C104014001DDDEB /* 添加好友页。。。 */,
+				63FEAD5D1C10411B001DDDEB /* 主页 */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -527,6 +530,8 @@
 		638DE3FB1C0ED2D4007A854D /* manager */ = {
 			isa = PBXGroup;
 			children = (
+				63FEAD4E1C10054E001DDDEB /* ProRemotePushManager.h */,
+				63FEAD4F1C10054E001DDDEB /* ProRemotePushManager.m */,
 				638DE3F81C0ED266007A854D /* ProUserManager.h */,
 				638DE3F91C0ED266007A854D /* ProUserManager.m */,
 				638DE3F21C0EA387007A854D /* ProThirdManager.h */,
@@ -534,6 +539,8 @@
 				638DE3FC1C0ED35D007A854D /* ProManagerProtocol.h */,
 				638DE41A1C0EE382007A854D /* ProChatManager.h */,
 				638DE41B1C0EE382007A854D /* ProChatManager.m */,
+				63FEAD561C1012BE001DDDEB /* ProWindowManager.h */,
+				63FEAD571C1012BE001DDDEB /* ProWindowManager.m */,
 			);
 			name = manager;
 			sourceTree = "<group>";
@@ -559,6 +566,65 @@
 				638DE3F61C0ED096007A854D /* ProChater.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		63FEAD591C103F1A001DDDEB /* 电影 */ = {
+			isa = PBXGroup;
+			children = (
+				63F7F3411C05B871006CD036 /* FilmdetailViewController.h */,
+				63F7F3421C05B871006CD036 /* FilmdetailViewController.m */,
+				63F7F3311C05B823006CD036 /* ViewController.h */,
+				63F7F3321C05B823006CD036 /* ViewController.m */,
+			);
+			name = "电影";
+			sourceTree = "<group>";
+		};
+		63FEAD5A1C103F29001DDDEB /* 聊天页 */ = {
+			isa = PBXGroup;
+			children = (
+				6333E2061C0562000019621A /* ProChatViewController.h */,
+				6333E2071C0562000019621A /* ProChatViewController.m */,
+				638DE4121C0ED876007A854D /* ProChatDetailViewController.h */,
+				638DE4131C0ED876007A854D /* ProChatDetailViewController.m */,
+			);
+			name = "聊天页";
+			sourceTree = "<group>";
+		};
+		63FEAD5B1C104014001DDDEB /* 添加好友页。。。 */ = {
+			isa = PBXGroup;
+			children = (
+				6333E20C1C0562320019621A /* ProOtherViewController.h */,
+				6333E20D1C0562320019621A /* ProOtherViewController.m */,
+			);
+			name = "添加好友页。。。";
+			sourceTree = "<group>";
+		};
+		63FEAD5C1C10402C001DDDEB /* 登陆页 */ = {
+			isa = PBXGroup;
+			children = (
+				63FEAD511C100E9B001DDDEB /* ProLoginViewController.h */,
+				63FEAD521C100E9B001DDDEB /* ProLoginViewController.m */,
+				63FEAD531C100E9B001DDDEB /* ProLoginViewController.xib */,
+			);
+			name = "登陆页";
+			sourceTree = "<group>";
+		};
+		63FEAD5D1C10411B001DDDEB /* 主页 */ = {
+			isa = PBXGroup;
+			children = (
+				6333E2091C0562200019621A /* ProMainViewController.h */,
+				6333E20A1C0562200019621A /* ProMainViewController.m */,
+			);
+			name = "主页";
+			sourceTree = "<group>";
+		};
+		63FEAD5E1C104138001DDDEB /* 设置页 */ = {
+			isa = PBXGroup;
+			children = (
+				6333E20F1C0562420019621A /* ProSetViewController.h */,
+				6333E2101C0562420019621A /* ProSetViewController.m */,
+			);
+			name = "设置页";
 			sourceTree = "<group>";
 		};
 		AFA57F9CB4B085BF9A10091B /* Frameworks */ = {
@@ -670,6 +736,7 @@
 				638DE40D1C0ED7C8007A854D /* talk2_bg.png in Resources */,
 				63322AFE1C02B60300340F75 /* Images.xcassets in Resources */,
 				638DE40A1C0ED7C8007A854D /* ren.jpg in Resources */,
+				63FEAD551C100E9B001DDDEB /* ProLoginViewController.xib in Resources */,
 				63F7F33E1C05B867006CD036 /* ListCollectionViewCell.xib in Resources */,
 				638DE40E1C0ED7C8007A854D /* talk2_bg@2x.png in Resources */,
 				638DE40C1C0ED7C8007A854D /* talk1_bg@2x.png in Resources */,
@@ -759,9 +826,11 @@
 				638DE3FA1C0ED266007A854D /* ProUserManager.m in Sources */,
 				6333E2201C0564C30019621A /* DJRefresh.m in Sources */,
 				63F7F33F1C05B867006CD036 /* ListTableViewCell.m in Sources */,
+				63FEAD581C1012BE001DDDEB /* ProWindowManager.m in Sources */,
 				63F7F3431C05B871006CD036 /* FilmdetailViewController.m in Sources */,
 				6333E2231C0564C30019621A /* DJRefreshView.m in Sources */,
 				63F7F32D1C05B808006CD036 /* DownLoadDataSource.m in Sources */,
+				63FEAD541C100E9B001DDDEB /* ProLoginViewController.m in Sources */,
 				6333E2421C0565080019621A /* JSONModel.m in Sources */,
 				6333E2451C0565080019621A /* JSONModelError.m in Sources */,
 				6333E2461C0565080019621A /* NSArray+JSONModel.m in Sources */,
@@ -780,6 +849,7 @@
 				630055831C06A7090058D658 /* ProFilmDetailModel.m in Sources */,
 				6333E2511C05652F0019621A /* BaseNavigationViewController.m in Sources */,
 				63F7F33C1C05B867006CD036 /* FilmListModel.m in Sources */,
+				63FEAD501C10054E001DDDEB /* ProRemotePushManager.m in Sources */,
 				63322AF31C02B60300340F75 /* main.m in Sources */,
 				6333E2491C0565080019621A /* JSONModel+networking.m in Sources */,
 				635D57801C0705B200EA2CBF /* ProActorsTableViewCell.m in Sources */,
@@ -922,7 +992,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.predecessor.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "217ab72b-3215-4b43-afd8-b59d2868ef31";
+				PROVISIONING_PROFILE = "97963724-e38e-4d98-8738-e9d2522545fd";
 			};
 			name = Debug;
 		};
@@ -938,7 +1008,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.predecessor.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "217ab72b-3215-4b43-afd8-b59d2868ef31";
+				PROVISIONING_PROFILE = "97963724-e38e-4d98-8738-e9d2522545fd";
 			};
 			name = Release;
 		};

@@ -8,17 +8,42 @@
 
 
 #import "ProThirdManager.h"
-
+#import "ProChatManager.h"
 #define EASEKEY    @"predecessor#singlepro"
-
+#define APNSCertName  @"predecessorAPNDev"
 
 @implementation ProThirdManager
 
 +(void)registerThirdSDKWithApplication:(UIApplication *)application options:(NSDictionary *)launchOptions{
     
-    [[EaseMob sharedInstance] registerSDKWithAppKey:@"predecessor#singlepro" apnsCertName:@"predecessorAPNDev" ];
+    
+    
+    
+    /**
+     *  下面全是聊天
+     */
+    [ProChatManager shareInstance];
+    
+    [[EaseMob sharedInstance] registerSDKWithAppKey:EASEKEY apnsCertName:APNSCertName];
     
     [[EaseMob sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
     
+    
+    //iOS8 注册APNS
+    if ([application respondsToSelector:@selector(registerForRemoteNotifications)]) {
+        [application registerForRemoteNotifications];
+        UIUserNotificationType notificationTypes = UIUserNotificationTypeBadge |
+        UIUserNotificationTypeSound |
+        UIUserNotificationTypeAlert;
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:notificationTypes categories:nil];
+        [application registerUserNotificationSettings:settings];
+    }
+    else{
+        //ios8 之前的方法
+        UIRemoteNotificationType notificationTypes = UIRemoteNotificationTypeBadge |
+        UIRemoteNotificationTypeSound |
+        UIRemoteNotificationTypeAlert;
+        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:notificationTypes];
+    }
 }
 @end
