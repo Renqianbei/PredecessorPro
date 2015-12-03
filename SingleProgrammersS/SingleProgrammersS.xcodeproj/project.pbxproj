@@ -67,7 +67,6 @@
 		638DE4151C0ED876007A854D /* ProChatDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638DE4131C0ED876007A854D /* ProChatDetailViewController.m */; };
 		638DE4191C0ED900007A854D /* MessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 638DE4181C0ED900007A854D /* MessageModel.m */; };
 		638DE41C1C0EE382007A854D /* ProChatManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 638DE41B1C0EE382007A854D /* ProChatManager.m */; };
-		63D1C65C1C0FF1DF001B3128 /* ProBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D1C65B1C0FF1DF001B3128 /* ProBaseManager.m */; };
 		63F7F32D1C05B808006CD036 /* DownLoadDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F7F3271C05B808006CD036 /* DownLoadDataSource.m */; };
 		63F7F32E1C05B808006CD036 /* FilmCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F7F3291C05B808006CD036 /* FilmCell.m */; };
 		63F7F32F1C05B808006CD036 /* FilmCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63F7F32A1C05B808006CD036 /* FilmCell.xib */; };
@@ -201,8 +200,6 @@
 		638DE4181C0ED900007A854D /* MessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageModel.m; sourceTree = "<group>"; };
 		638DE41A1C0EE382007A854D /* ProChatManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProChatManager.h; sourceTree = "<group>"; };
 		638DE41B1C0EE382007A854D /* ProChatManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProChatManager.m; sourceTree = "<group>"; };
-		63D1C65A1C0FF1DF001B3128 /* ProBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProBaseManager.h; sourceTree = "<group>"; };
-		63D1C65B1C0FF1DF001B3128 /* ProBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProBaseManager.m; sourceTree = "<group>"; };
 		63F7F3261C05B808006CD036 /* DownLoadDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoadDataSource.h; sourceTree = "<group>"; };
 		63F7F3271C05B808006CD036 /* DownLoadDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoadDataSource.m; sourceTree = "<group>"; };
 		63F7F3281C05B808006CD036 /* FilmCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilmCell.h; sourceTree = "<group>"; };
@@ -537,8 +534,6 @@
 				638DE3FC1C0ED35D007A854D /* ProManagerProtocol.h */,
 				638DE41A1C0EE382007A854D /* ProChatManager.h */,
 				638DE41B1C0EE382007A854D /* ProChatManager.m */,
-				63D1C65A1C0FF1DF001B3128 /* ProBaseManager.h */,
-				63D1C65B1C0FF1DF001B3128 /* ProBaseManager.m */,
 			);
 			name = manager;
 			sourceTree = "<group>";
@@ -754,7 +749,6 @@
 				63322B191C02ECAC00340F75 /* ProCenterViewcontrolelr.m in Sources */,
 				638DE41C1C0EE382007A854D /* ProChatManager.m in Sources */,
 				63F7F32E1C05B808006CD036 /* FilmCell.m in Sources */,
-				63D1C65C1C0FF1DF001B3128 /* ProBaseManager.m in Sources */,
 				6333E24A1C0565080019621A /* JSONKeyMapper.m in Sources */,
 				6333E20E1C0562320019621A /* ProOtherViewController.m in Sources */,
 				6333E2551C0566CA0019621A /* UIColor+UIColor_category.m in Sources */,

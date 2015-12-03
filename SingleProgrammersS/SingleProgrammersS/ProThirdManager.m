@@ -16,7 +16,7 @@
 
 +(void)registerThirdSDKWithApplication:(UIApplication *)application options:(NSDictionary *)launchOptions{
     
-    [[EaseMob sharedInstance] registerSDKWithAppKey:@"predecessor#singlepro" apnsCertName:nil ];
+    [[EaseMob sharedInstance] registerSDKWithAppKey:@"predecessor#singlepro" apnsCertName:@"predecessorAPNDev" ];
     
     [[EaseMob sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
     

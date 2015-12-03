@@ -11,6 +11,7 @@
 #import "MessageModel.h"
 #import "ChatCell.h"
 
+#define TEXTFieldHEIGHT  50
 static NSString * cellIdentifier = @"cellIndetifierone";
 
 @interface ProChatDetailViewController ()<UITextFieldDelegate>
@@ -41,13 +42,17 @@ static NSString * cellIdentifier = @"cellIndetifierone";
     //加载所有聊天信息
     [_messages addObjectsFromArray:[ProChatManager loadAllMessageWithChatter:self.chater.username]];
     [self.tableView reloadData];
+    
+    //滚到最后一行
+    [self scrollToBottom];
+
     // Do any additional setup after loading the view from its nib.
 }
 
 -(void)addTableView{
     
     
-    self.tableView.frame = self.view.bounds;
+    self.tableView.frame = CGRectMake(0, 0, KScreenWidth, KScreenHeight - TEXTFieldHEIGHT);
     [self.tableView registerClass:[ChatCell class] forCellReuseIdentifier:cellIdentifier];
     
     [self.view addSubview:self.tableView];
@@ -59,7 +64,7 @@ static NSString * cellIdentifier = @"cellIndetifierone";
 -(void)addtextField{
     
     
-    UITextField * field = [[UITextField alloc] initWithFrame:CGRectMake(0, KScreenHeight - 50, KScreenWidth, 50)];
+    UITextField * field = [[UITextField alloc] initWithFrame:CGRectMake(0, KScreenHeight - TEXTFieldHEIGHT, KScreenWidth, TEXTFieldHEIGHT)];
     field.returnKeyType = UIReturnKeySend;
     
     field.delegate = self;
@@ -84,8 +89,12 @@ static NSString * cellIdentifier = @"cellIndetifierone";
     
     [UIView animateWithDuration:duration animations:^{
         
-        _textField.y = _textField.y - height;
-        
+        _textField.y = KScreenHeight - TEXTFieldHEIGHT - height;
+        self.tableView.height = KScreenHeight - TEXTFieldHEIGHT - height;
+    } completion:^(BOOL finished) {
+        //滚到最后一行
+        [self scrollToBottom];
+
     }];
 }
 
@@ -93,16 +102,26 @@ static NSString * cellIdentifier = @"cellIndetifierone";
     
     NSDictionary * info = notification.userInfo;
     
-    float height = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size.height;
+//    float height = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size.height;
     float duration = [[info objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
     
     [UIView animateWithDuration:duration animations:^{
         
-        _textField.y = _textField.y + height;
-        
+        _textField.y = KScreenHeight - TEXTFieldHEIGHT ;
+        self.tableView.height = KScreenHeight - TEXTFieldHEIGHT ;
+
+    }completion:^(BOOL finished) {
+        //滚到最后一行
+        [self scrollToBottom];
     }];
 }
 
+-(void)scrollToBottom{
+    if (_messages.count == 0) {
+        return;
+    }
+    [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:_messages.count - 1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+}
 
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -165,8 +184,11 @@ static NSString * cellIdentifier = @"cellIndetifierone";
         }else{
             [_messages addObject:model];
             
-            [self.tableView  insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:_messages.count-2 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
+            [self.tableView  insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:_messages.count-1 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
             
+            //滚到最后一行
+            [self scrollToBottom];
+
         }
     }];
     
@@ -182,8 +204,9 @@ static NSString * cellIdentifier = @"cellIndetifierone";
  *
  *  @param models 消息数组
  */
--(void)didReceiveMessageModel:(NSArray *)models{
+-(void)didReceiveMessageModel:(NSNotification *)notification{
     
+    NSArray * models = notification.object;
     //需要判断 消息 是否是当前页的消息
     
     NSMutableArray * flitters = [NSMutableArray array];
@@ -199,9 +222,9 @@ static NSString * cellIdentifier = @"cellIndetifierone";
     
     NSMutableArray * indextPaths = [NSMutableArray array];
     
-    for (NSInteger i = _messages.count - 1; i < flitters.count; i ++) {
+    for (NSInteger i = 0; i < flitters.count; i ++) {
         
-        NSIndexPath * indextPath = [NSIndexPath indexPathForRow:i inSection:0];
+        NSIndexPath * indextPath = [NSIndexPath indexPathForRow:i+_messages.count inSection:0];
         [indextPaths addObject:indextPath];
     }
     
@@ -209,6 +232,9 @@ static NSString * cellIdentifier = @"cellIndetifierone";
     
     [self.tableView insertRowsAtIndexPaths:indextPaths withRowAnimation:UITableViewRowAnimationAutomatic];
     
+    
+    //滚到最后一行
+    [self scrollToBottom];
     
 }
 
