@@ -58,7 +58,7 @@
 -(void)refreshCell:(MessageModel *)model{
     
     _contetlabel.text = model.content;
-    _headImageView.image = [UIImage imageNamed:model.headimage];
+    _headImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",model.name]];
     
     if (model.isSelf) {
         UIImage * image = [UIImage imageNamed:@"talk2_bg"];
@@ -159,11 +159,11 @@
     
     if ([[UIDevice currentDevice] systemVersion].floatValue <= 7.0) {
         //如果系统版本小于 7.0 
-        size =  [text sizeWithFont:[UIFont systemFontOfSize:18] constrainedToSize:CGSizeMake(maxWidth, 10000)];
+        size =  [text sizeWithFont:[UIFont systemFontOfSize:18] constrainedToSize:CGSizeMake(maxWidth, CGFLOAT_MAX) ];
         
     }else{
         //ios 7 之后替代上面的方法
-       CGRect rect = [text boundingRectWithSize:CGSizeMake(maxWidth, 10000) options:NSStringDrawingTruncatesLastVisibleLine attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:18]} context:nil];
+       CGRect rect = [text boundingRectWithSize:CGSizeMake(maxWidth, CGFLOAT_MAX) options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:18]} context:nil];
         
         size = rect.size;
         

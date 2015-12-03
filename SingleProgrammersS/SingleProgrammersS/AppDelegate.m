@@ -40,6 +40,7 @@
     
     BaseNavigationViewController * naVC = [[BaseNavigationViewController alloc] initWithRootViewController:setVc];//设置页
 
+    
     centerVC.type = Fold;//样式
     
     

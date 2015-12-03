@@ -48,7 +48,7 @@ static NSString * cellIdentifier = @"cellid";
     if ([item.title isEqualToString:@"登陆"]) {
        
         
-        [[EaseMob sharedInstance ].chatManager asyncLoginWithUsername:@"ren" password:@"123" completion:^(NSDictionary *loginInfo, EMError *error) {
+        [[EaseMob sharedInstance ].chatManager asyncLoginWithUsername:@"liu" password:@"123" completion:^(NSDictionary *loginInfo, EMError *error) {
             
             if (error == nil) {
                
