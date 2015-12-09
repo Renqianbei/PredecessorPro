@@ -116,9 +116,12 @@
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo NS_AVAILABLE_IOS(3_0) __TVOS_PROHIBITED{
     
     NSLog(@"%@",userInfo);
-    
-    //处理推送过来的消息
-    [ProRemotePushManager application:application didReceiveRemoteNotification:userInfo];
+    if (application.applicationState != UIApplicationStateActive){
+        
+        //处理推送过来的消息
+        [ProRemotePushManager application:application didReceiveRemoteNotification:userInfo];
+        
+    }
     
     
     

@@ -11,6 +11,7 @@
 #import "ProChatDetailViewController.h"
 #import "ProCenterViewcontrolelr.h"
 #import "ProChater.h"
+#import "ProLoginViewController.h"
 @implementation ProRemotePushManager
 
 +(AppDelegate *)delegate{
@@ -31,6 +32,10 @@
     
     UINavigationController * rootNav =  (UINavigationController *)[self delegate].window.rootViewController;
     
+    if ([rootNav isKindOfClass:[ProLoginViewController class]]) {
+        return;
+        
+    }
     [rootNav popToRootViewControllerAnimated:NO];
     
     

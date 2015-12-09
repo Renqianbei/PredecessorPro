@@ -88,6 +88,7 @@
     
     if (_panGesture == nil) {
         _panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panView:)];
+        _panGesture.maximumNumberOfTouches = 1;
         
     }
     return _panGesture;
