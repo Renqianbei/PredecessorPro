@@ -275,17 +275,7 @@
 		63322AE41C02B60300340F75 = {
 			isa = PBXGroup;
 			children = (
-				63298F721C03202B008AB241 /* 11_1.jpg */,
-				63298F731C03202B008AB241 /* 11_2.jpg */,
-				638DE3FD1C0ED7C8007A854D /* 10_1.jpg */,
-				638DE3FE1C0ED7C8007A854D /* 10_2.jpg */,
-				638DE3FF1C0ED7C8007A854D /* 10_3.jpg */,
-				638DE4001C0ED7C8007A854D /* liu.jpg */,
-				638DE4011C0ED7C8007A854D /* ren.jpg */,
-				638DE4021C0ED7C8007A854D /* talk1_bg.png */,
-				638DE4031C0ED7C8007A854D /* talk1_bg@2x.png */,
-				638DE4041C0ED7C8007A854D /* talk2_bg.png */,
-				638DE4051C0ED7C8007A854D /* talk2_bg@2x.png */,
+				63DC15C21C2D56A100A0729D /* imageS */,
 				63322AEF1C02B60300340F75 /* SingleProgrammersS */,
 				63322B091C02B60300340F75 /* SingleProgrammersSTests */,
 				63322AEE1C02B60300340F75 /* Products */,
@@ -555,6 +545,24 @@
 				63FEAD571C1012BE001DDDEB /* ProWindowManager.m */,
 			);
 			name = Manager;
+			sourceTree = "<group>";
+		};
+		63DC15C21C2D56A100A0729D /* imageS */ = {
+			isa = PBXGroup;
+			children = (
+				63298F721C03202B008AB241 /* 11_1.jpg */,
+				63298F731C03202B008AB241 /* 11_2.jpg */,
+				638DE3FD1C0ED7C8007A854D /* 10_1.jpg */,
+				638DE3FE1C0ED7C8007A854D /* 10_2.jpg */,
+				638DE3FF1C0ED7C8007A854D /* 10_3.jpg */,
+				638DE4001C0ED7C8007A854D /* liu.jpg */,
+				638DE4011C0ED7C8007A854D /* ren.jpg */,
+				638DE4021C0ED7C8007A854D /* talk1_bg.png */,
+				638DE4031C0ED7C8007A854D /* talk1_bg@2x.png */,
+				638DE4041C0ED7C8007A854D /* talk2_bg.png */,
+				638DE4051C0ED7C8007A854D /* talk2_bg@2x.png */,
+			);
+			name = imageS;
 			sourceTree = "<group>";
 		};
 		63EBCE791C2D493000ECBB53 /* RequestDataSource */ = {
