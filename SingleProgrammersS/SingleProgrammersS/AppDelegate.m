@@ -5,7 +5,6 @@
 //  Created by 任前辈 on 15/11/23.
 //  Copyright (c) 2015年 SingleProgrammers. All rights reserved.
 //
-
 #import "AppDelegate.h"
 
 #import "ProThirdManager.h"
@@ -27,9 +26,13 @@
     
     
     
-    [ProWindowManager setLogIN];
+    [ProWindowManager setLogIN];//设置登陆页
+    
+    //测试使用    [ProWindowManager setMainrootVC];//设置主页
+
     
     UIImageView * imageView = [[UIImageView alloc] initWithFrame:self.window.bounds];
+   
     imageView.image = [UIImage imageNamed:@"11_1.jpg"];
 
     [self.window insertSubview:imageView atIndex:0];
@@ -110,7 +113,8 @@
 // 注册deviceToken失败
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error{
     [[EaseMob sharedInstance] application:application didFailToRegisterForRemoteNotificationsWithError:error];
-    NSLog(@"error -- %@",error);
+    
+    
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo NS_AVAILABLE_IOS(3_0) __TVOS_PROHIBITED{
